@@ -12,6 +12,8 @@ date: 11-27-2019
 output:
   distill::distill_article:
     self_contained: false
+categories:
+  - post
 ---
 
 ```{r setup, include=FALSE}
