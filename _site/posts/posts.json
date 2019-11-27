@@ -1,0 +1,17 @@
+[
+  {
+    "path": "posts/welcome/",
+    "title": "Welcome to CompBioMethods",
+    "description": "Welcome to our new blog, CompBioMethods. We hope you enjoy \nreading what we have to say!",
+    "author": [
+      {
+        "name": "Nora Jones",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2019-11-27",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2019-11-27T14:59:02+01:00"
+  }
+]
