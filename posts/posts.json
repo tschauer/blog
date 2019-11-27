@@ -1,22 +1,5 @@
 [
   {
-    "path": "posts/welcome/",
-    "title": "Welcome to CompBioMethods",
-    "description": "Welcome to our new blog, CompBioMethods. We hope you enjoy \nreading what we have to say!",
-    "author": [
-      {
-        "name": "Nora Jones",
-        "url": "https://example.com/norajones"
-      }
-    ],
-    "date": "2019-11-27",
-    "categories": [
-      "post"
-    ],
-    "preview": {},
-    "last_modified": "2019-11-27T16:32:25+01:00"
-  },
-  {
     "path": "posts/2019-11-27-test-post/",
     "title": "Test Post",
     "description": "A short description of the post.",
@@ -33,5 +16,22 @@
     ],
     "preview": {},
     "last_modified": "2019-11-27T16:32:30+01:00"
+  },
+  {
+    "path": "posts/welcome/",
+    "title": "Welcome to CompBioMethods",
+    "description": "Welcome to our new blog, CompBioMethods. We hope you enjoy \nreading what we have to say!",
+    "author": [
+      {
+        "name": "Nora Jones",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2019-11-27",
+    "categories": [
+      "post"
+    ],
+    "preview": {},
+    "last_modified": "2019-11-27T16:32:25+01:00"
   }
 ]
