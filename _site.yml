@@ -2,7 +2,7 @@ name: "blog"
 title: "CompBioMethods"
 description: |
   CompBioMethods
-output_dir: "_site"
+output_dir: "."
 navbar:
   right:
     - text: "Home"
