@@ -8,7 +8,7 @@ author:
     url: https://example.com/norajones
     affiliation: Spacely Sprockets
     affiliation_url: https://example.com/spacelysprokets
-date: 11-27-2019
+date: 2019-11-27
 output:
   distill::distill_article:
     self_contained: false
