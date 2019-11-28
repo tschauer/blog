@@ -5,7 +5,7 @@ description: |
 author:
   - name: Tamas Schauer 
     affiliation: LMU Munich, Biomedical Center, Bioinformatics Unit
-repository_url: https://github.com/tschauer/blog
+repository_url: https://github.com/tschauer/blog/tree/gh-pages
 ---
 
 ```{r setup, include=FALSE}

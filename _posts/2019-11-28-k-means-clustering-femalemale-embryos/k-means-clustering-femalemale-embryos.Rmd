@@ -14,7 +14,7 @@ categories:
   - k-means
   - RNAseq
   - Drosophila
-repository_url: https://github.com/tschauer/blog
+repository_url: https://github.com/tschauer/blog/tree/gh-pages
 ---
 
 

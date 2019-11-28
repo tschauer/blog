@@ -13,5 +13,5 @@ navbar:
     - icon: fa fa-rss
       href: index.xml
     - icon: fab fa-github
-      href: https://github.com/tschauer/blog
+      href: https://github.com/tschauer/blog/tree/gh-pages
 output: distill::distill_article
