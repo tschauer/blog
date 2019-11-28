@@ -1,9 +1,18 @@
 ---
-title: "About this blog"
+title: "About CompBioMethods"
 description: |
-  Some additional details about the blog
+  This is a collection of computational methods for experimental biology
+author:
+  - name: Tamas Schauer 
+    affiliation: LMU Munich, Biomedical Center, Bioinformatics Unit
+repository_url: https://github.com/tschauer/blog
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+
+* From basics to intermediate level
+* Applied statistical methods
+* Genomics and next generation sequencing
