@@ -10,8 +10,10 @@ output:
     self_contained: false
     toc: true
     toc_depth: 3
+base_url: https://tschauer.github.io/blog/
 twitter:
   site: "@tamas_schauer"
+  card: summary_large_image
 categories:
   - k-means
   - RNAseq
