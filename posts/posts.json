@@ -1,8 +1,26 @@
 [
   {
+    "path": "posts/2019-11-29-data-binning-and-correlation/",
+    "title": "Data Binning and Correlation",
+    "description": "Averaging data in equal sized bins falsifies weak assosciations to strong.",
+    "author": [
+      {
+        "name": "Tamas Schauer",
+        "url": {}
+      }
+    ],
+    "date": "2019-11-26",
+    "categories": [
+      "statistics",
+      "falsification"
+    ],
+    "preview": "posts/2019-11-29-data-binning-and-correlation/data-binning-and-correlation_files/figure-html5/unnamed-chunk-2-1.png",
+    "last_modified": "2019-11-29T10:15:43+01:00"
+  },
+  {
     "path": "posts/2019-11-28-k-means-clustering-femalemale-embryos/",
     "title": "K-Means Clustering - Female/Male Embryos",
-    "description": "In this post, I show how to distinguish female and male Drosophila embryos using k-means clustering.",
+    "description": "Drosophila female and male embryos can be distinguished using k-means clustering on marker genes from RNA-seq data.",
     "author": [
       {
         "name": "Tamas Schauer",
@@ -16,7 +34,7 @@
       "Drosophila"
     ],
     "preview": "posts/2019-11-28-k-means-clustering-femalemale-embryos/k-means-clustering-femalemale-embryos_files/figure-html5/unnamed-chunk-8-1.png",
-    "last_modified": "2019-11-28T17:25:53+01:00"
+    "last_modified": "2019-11-29T10:15:36+01:00"
   },
   {
     "path": "posts/welcome/",

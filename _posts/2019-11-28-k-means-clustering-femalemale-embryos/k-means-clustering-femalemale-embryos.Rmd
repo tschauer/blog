@@ -1,7 +1,7 @@
 ---
 title: "K-Means Clustering - Female/Male Embryos"
 description: |
-  In this post, I show how to distinguish female and male Drosophila embryos using k-means clustering.
+  Drosophila female and male embryos can be distinguished using k-means clustering on marker genes from RNA-seq data.
 author:
   - name: Tamas Schauer
 date: 2019-11-20
@@ -211,14 +211,14 @@ plotDots <- function(my_data,
 ```
 
 
-```{r, layout = "l-body-outset", fig.height=10, fig.width=20}
+```{r, fig.height=10, fig.width=10}
 # conditions
 my_conditions <- factor(substr(colnames(log2_TPM),1,2))
 
 # setup color
 my_color_palette <- c("#999999", "#d6604d", "#4393c3")
 
-par(mfrow=c(1,4), oma=c(4,2,2,2), cex=1.5)
+par(mfrow=c(2,2), oma=c(2,2,2,2), cex=1.25)
 
 # iterate through marker genes
 for(i in seq_along(my_favorite_genes)){
@@ -231,21 +231,22 @@ for(i in seq_along(my_favorite_genes)){
                      point_size = 0.8)
 }
 
-mtext(text = "Stages", side = 1, line = -2, outer = TRUE, cex = 2)
-mtext(text = "log2 TPM", side = 2, outer = TRUE, cex = 2)
+mtext(text = "Stages", side = 1, line = -2, outer = TRUE, cex=1.5)
+mtext(text = "log2 TPM", side = 2, outer = TRUE, cex=1.5)
 
-par(fig = c(0,1,0,1), mar=c(0,0,0,0), cex=1.5, new = TRUE)
+par(fig = c(0,1,0,1), cex=1.25, new = TRUE)
 plot(0,0, xlab="", ylab="", xaxt="n", yaxt="n", bty="n", type="n" )
-legend("bottomright", legend = c("Early", "Female", "Male"), pch = 19, col = my_color_palette, horiz = T)
+legend("center", legend = c("Early", "Female", "Male"), 
+       pch = 19, col = my_color_palette, horiz = T, )
 
 ```
 
 
 
+---
 
 
-
-### Conclusions
+# Conclusions
 
 * Expected sex-specific pattern:
     + Sxl is female, whereas msl-2 male specifc

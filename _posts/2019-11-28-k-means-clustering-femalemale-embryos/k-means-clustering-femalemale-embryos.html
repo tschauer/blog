@@ -21,7 +21,7 @@
   <!--radix_placeholder_meta_tags-->
   <title>K-Means Clustering - Female/Male Embryos</title>
   
-  <meta property="description" itemprop="description" content="In this post, I show how to distinguish female and male Drosophila embryos using k-means clustering."/>
+  <meta property="description" itemprop="description" content="Drosophila female and male embryos can be distinguished using k-means clustering on marker genes from RNA-seq data."/>
   
   
   <!--  https://schema.org/Article -->
@@ -32,19 +32,19 @@
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="K-Means Clustering - Female/Male Embryos"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="In this post, I show how to distinguish female and male Drosophila embryos using k-means clustering."/>
+  <meta property="og:description" content="Drosophila female and male embryos can be distinguished using k-means clustering on marker genes from RNA-seq data."/>
   <meta property="og:locale" content="en_US"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="K-Means Clustering - Female/Male Embryos"/>
-  <meta property="twitter:description" content="In this post, I show how to distinguish female and male Drosophila embryos using k-means clustering."/>
+  <meta property="twitter:description" content="Drosophila female and male embryos can be distinguished using k-means clustering on marker genes from RNA-seq data."/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","repository_url"]}},"value":[{"type":"character","attributes":{},"value":["K-Means Clustering - Female/Male Embryos"]},{"type":"character","attributes":{},"value":["In this post, I show how to distinguish female and male Drosophila embryos using k-means clustering.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Tamas Schauer"]}]}]},{"type":"character","attributes":{},"value":["2019-11-20"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]},{"type":"character","attributes":{},"value":["k-means","RNAseq","Drosophila"]},{"type":"character","attributes":{},"value":["https://github.com/tschauer/blog"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","repository_url"]}},"value":[{"type":"character","attributes":{},"value":["K-Means Clustering - Female/Male Embryos"]},{"type":"character","attributes":{},"value":["Drosophila female and male embryos can be distinguished using k-means clustering on marker genes from RNA-seq data.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Tamas Schauer"]}]}]},{"type":"character","attributes":{},"value":["2019-11-20"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]},{"type":"character","attributes":{},"value":["k-means","RNAseq","Drosophila"]},{"type":"character","attributes":{},"value":["https://github.com/tschauer/blog/tree/gh-pages"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -942,7 +942,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"K-Means Clustering - Female/Male Embryos","description":"In this post, I show how to distinguish female and male Drosophila embryos using k-means clustering.","authors":[{"author":"Tamas Schauer","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2019-11-20T00:00:00.000+01:00","citationText":"Schauer, 2019"}
+{"title":"K-Means Clustering - Female/Male Embryos","description":"Drosophila female and male embryos can be distinguished using k-means clustering on marker genes from RNA-seq data.","authors":[{"author":"Tamas Schauer","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2019-11-20T00:00:00.000+01:00","citationText":"Schauer, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -953,7 +953,7 @@
 
 <div class="d-title">
 <h1>K-Means Clustering - Female/Male Embryos</h1>
-<p>In this post, I show how to distinguish female and male Drosophila embryos using k-means clustering.</p>
+<p>Drosophila female and male embryos can be distinguished using k-means clustering on marker genes from RNA-seq data.</p>
 </div>
 
 <div class="d-byline">
@@ -975,8 +975,8 @@
 <li><a href="#k-means-clustering">K-means Clustering</a><ul>
 <li><a href="#clustering-with-k3">Clustering with k=3</a></li>
 <li><a href="#plot-marker-genes">Plot Marker Genes</a></li>
-<li><a href="#conclusions">Conclusions</a></li>
 </ul></li>
+<li><a href="#conclusions">Conclusions</a></li>
 <li><a href="#data-source">Data Source</a></li>
 <li><a href="#references">References</a></li>
 </ul>
@@ -1166,7 +1166,7 @@ Levels: 1 2 3</code></pre>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
-<div class="layout-chunk" data-layout="l-body-outset">
+<div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 # conditions
 my_conditions &lt;- factor(substr(colnames(log2_TPM),1,2))
@@ -1174,7 +1174,7 @@ my_conditions &lt;- factor(substr(colnames(log2_TPM),1,2))
 # setup color
 my_color_palette &lt;- c(&quot;#999999&quot;, &quot;#d6604d&quot;, &quot;#4393c3&quot;)
 
-par(mfrow=c(1,4), oma=c(4,2,2,2), cex=1.5)
+par(mfrow=c(2,2), oma=c(2,2,2,2), cex=1.25)
 
 # iterate through marker genes
 for(i in seq_along(my_favorite_genes)){
@@ -1187,15 +1187,17 @@ for(i in seq_along(my_favorite_genes)){
                      point_size = 0.8)
 }
 
-mtext(text = &quot;Stages&quot;, side = 1, line = -2, outer = TRUE, cex = 2)
-mtext(text = &quot;log2 TPM&quot;, side = 2, outer = TRUE, cex = 2)
+mtext(text = &quot;Stages&quot;, side = 1, line = -2, outer = TRUE, cex=1.5)
+mtext(text = &quot;log2 TPM&quot;, side = 2, outer = TRUE, cex=1.5)
 
-par(fig = c(0,1,0,1), mar=c(0,0,0,0), cex=1.5, new = TRUE)
+par(fig = c(0,1,0,1), cex=1.25, new = TRUE)
 plot(0,0, xlab=&quot;&quot;, ylab=&quot;&quot;, xaxt=&quot;n&quot;, yaxt=&quot;n&quot;, bty=&quot;n&quot;, type=&quot;n&quot; )
-legend(&quot;bottomright&quot;, legend = c(&quot;Early&quot;, &quot;Female&quot;, &quot;Male&quot;), pch = 19, col = my_color_palette, horiz = T)</code></pre>
-<p><img src="k-means-clustering-femalemale-embryos_files/figure-html5/unnamed-chunk-8-1.png" width="1920" /></p>
+legend(&quot;center&quot;, legend = c(&quot;Early&quot;, &quot;Female&quot;, &quot;Male&quot;), 
+       pch = 19, col = my_color_palette, horiz = T, )</code></pre>
+<p><img src="k-means-clustering-femalemale-embryos_files/figure-html5/unnamed-chunk-8-1.png" width="960" /></p>
 </div>
-<h3 id="conclusions">Conclusions</h3>
+<hr />
+<h1 id="conclusions">Conclusions</h1>
 <ul>
 <li>Expected sex-specific pattern:
 <ul>
@@ -1225,7 +1227,7 @@ legend(&quot;bottomright&quot;, legend = c(&quot;Early&quot;, &quot;Female&quot;
 <!--radix_placeholder_appendices-->
 <div class="appendix-bottom">
 <h3 id="updates-and-corrections">Corrections</h3>
-<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/tschauer/blog/issues/new">create an issue</a> on the source repository.</p>
+<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/tschauer/blog/tree/gh-pages/issues/new">create an issue</a> on the source repository.</p>
 </div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
