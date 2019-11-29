@@ -7,15 +7,24 @@
     <description>CompBioMethods
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 20 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Data Binning and Correlation</title>
+      <dc:creator>Tamas Schauer</dc:creator>
+      <link>https://tschauer.github.io/blog/posts/2019-11-29-data-binning-and-correlation</link>
+      <description>Averaging data in equal sized bins falsifies weak assosciations to strong.</description>
+      <guid>https://tschauer.github.io/blog/posts/2019-11-29-data-binning-and-correlation</guid>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://tschauer.github.io/blog/posts/2019-11-29-data-binning-and-correlation/data-binning-and-correlation_files/figure-html5/unnamed-chunk-4-1.png" medium="image" type="image/png" width="1920" height="1920"/>
+    </item>
     <item>
       <title>K-Means Clustering - Female/Male Embryos</title>
       <dc:creator>Tamas Schauer</dc:creator>
       <link>https://tschauer.github.io/blog/posts/2019-11-28-k-means-clustering-femalemale-embryos</link>
-      <description>In this post, I show how to distinguish female and male Drosophila embryos using k-means clustering.</description>
+      <description>Drosophila female and male embryos can be distinguished using k-means clustering on marker genes from RNA-seq data.</description>
       <guid>https://tschauer.github.io/blog/posts/2019-11-28-k-means-clustering-femalemale-embryos</guid>
       <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://tschauer.github.io/blog/posts/2019-11-28-k-means-clustering-femalemale-embryos/k-means-clustering-femalemale-embryos_files/figure-html5/unnamed-chunk-8-1.png" medium="image" type="image/png" width="3840" height="1920"/>
+      <media:content url="https://tschauer.github.io/blog/posts/2019-11-28-k-means-clustering-femalemale-embryos/k-means-clustering-femalemale-embryos_files/figure-html5/unnamed-chunk-8-1.png" medium="image" type="image/png" width="1920" height="1920"/>
     </item>
     <item>
       <title>Welcome to CompBioMethods</title>

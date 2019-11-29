@@ -11,7 +11,7 @@ output:
     self_contained: false
     toc: true
     toc_depth: 3
-preview: posts/2019-11-29-data-binning-and-correlation/data-binning-and-correlation_files/figure-html5/unnamed-chunk-2-1.png
+base_url: https://tschauer.github.io/blog/
 twitter:
   site: "@tamas_schauer"
   card: summary_large_image
@@ -106,7 +106,7 @@ for(n_bins in c(150,50,20)){
 
 ---
 
-```{r fig.align='center', fig.height=10, fig.width=10}
+```{r fig.align='center', fig.height=10, fig.width=10, preview=TRUE}
 
 par(mfrow=c(2,2), oma=c(2,2,2,2))
 
