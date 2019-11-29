@@ -13,6 +13,7 @@ output:
     toc_depth: 3
 twitter:
   site: "@tamas_schauer"
+  card: summary_large_image
 categories:
   - statistics
   - falsification
