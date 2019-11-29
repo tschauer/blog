@@ -2,4 +2,8 @@
 title: "CompBioMethods"
 site: distill::distill_website
 listing: posts
+base_url: https://tschauer.github.io/blog/
+twitter:
+  site: "@tamas_schauer"
+  card: summary_large_image
 ---

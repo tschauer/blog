@@ -15,4 +15,7 @@ navbar:
       href: https://github.com/tschauer/blog/tree/gh-pages
 bibliography: biblio.bib
 base_url: https://tschauer.github.io/blog/
+twitter:
+  site: "@tamas_schauer"
+  card: summary_large_image
 output: distill::distill_article
