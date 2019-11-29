@@ -3,7 +3,6 @@ title: "CompBioMethods"
 description: |
   CompBioMethods
 output_dir: "."
-base_url: https://tschauer.github.io/blog/
 navbar:
   right:
     - text: "Home"
