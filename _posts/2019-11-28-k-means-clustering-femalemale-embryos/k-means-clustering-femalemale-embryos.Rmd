@@ -10,6 +10,8 @@ output:
     self_contained: false
     toc: true
     toc_depth: 3
+twitter:
+  site: "@tamas_schauer"
 categories:
   - k-means
   - RNAseq
@@ -211,7 +213,7 @@ plotDots <- function(my_data,
 ```
 
 
-```{r, fig.height=10, fig.width=10}
+```{r, fig.height=10, fig.width=10, preview=TRUE}
 # conditions
 my_conditions <- factor(substr(colnames(log2_TPM),1,2))
 

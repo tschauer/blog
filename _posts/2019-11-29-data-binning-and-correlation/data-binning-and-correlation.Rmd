@@ -11,6 +11,8 @@ output:
     self_contained: false
     toc: true
     toc_depth: 3
+twitter:
+  site: "@tamas_schauer"
 categories:
   - statistics
   - falsification
@@ -51,7 +53,7 @@ df <- df[order(df$x),]
 ```
 
 
-```{r fig.align="center", fig.height=6, fig.width=6}
+```{r fig.align="center", fig.height=6, fig.width=6, preview=TRUE}
 # plot data
 par(mfrow=c(1,1))
 

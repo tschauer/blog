@@ -40,12 +40,13 @@
 <meta property="twitter:card" content="summary"/>
 <meta property="twitter:title" content="CompBioMethods: Data Binning and Correlation"/>
 <meta property="twitter:description" content="Averaging data in equal sized bins falsifies weak assosciations to strong."/>
+<meta property="twitter:site" content="@tamas_schauer"/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","repository_url"]}},"value":[{"type":"character","attributes":{},"value":["Data Binning and Correlation"]},{"type":"character","attributes":{},"value":["Averaging data in equal sized bins falsifies weak assosciations to strong."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Tamas Schauer"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["2019-11-26"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]},{"type":"character","attributes":{},"value":["statistics","falsification"]},{"type":"character","attributes":{},"value":["https://github.com/tschauer/blog/tree/gh-pages"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","twitter","categories","repository_url"]}},"value":[{"type":"character","attributes":{},"value":["Data Binning and Correlation"]},{"type":"character","attributes":{},"value":["Averaging data in equal sized bins falsifies weak assosciations to strong."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Tamas Schauer"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["2019-11-26"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["site"]}},"value":[{"type":"character","attributes":{},"value":["@tamas_schauer"]}]},{"type":"character","attributes":{},"value":["statistics","falsification"]},{"type":"character","attributes":{},"value":["https://github.com/tschauer/blog/tree/gh-pages"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1364,7 +1365,7 @@ plot(y ~ x, data = df, main = &quot;&quot;, pch=19, col = &quot;#00000022&quot;,
 legend(&quot;topleft&quot;, legend = paste(&quot;r =&quot;, round(cor(df$x,df$y),2)))
 legend(&quot;topright&quot;, legend = paste(&quot;pval =&quot;, format(cor.test(df$x,df$y)$p.value, digits = 2, scientific = T)))
 abline(lm(y ~x, data = df), col=&quot;red3&quot;, lwd=2)</code></pre>
-<p><img src="data-binning-and-correlation_files/figure-html5/unnamed-chunk-2-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p><img src="data-binning-and-correlation_files/figure-html5/unnamed-chunk-2-1.png" width="576" data-distill-preview=1 style="display: block; margin: auto;" /></p>
 </div>
 <ul>
 <li>very weak assosication</li>
