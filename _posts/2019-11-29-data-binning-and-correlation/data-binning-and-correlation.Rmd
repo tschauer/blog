@@ -11,6 +11,7 @@ output:
     self_contained: false
     toc: true
     toc_depth: 3
+preview: posts/2019-11-29-data-binning-and-correlation/data-binning-and-correlation_files/figure-html5/unnamed-chunk-2-1.png
 twitter:
   site: "@tamas_schauer"
   card: summary_large_image
@@ -54,7 +55,7 @@ df <- df[order(df$x),]
 ```
 
 
-```{r fig.align="center", fig.height=6, fig.width=6, preview=TRUE}
+```{r fig.align="center", fig.height=6, fig.width=6}
 # plot data
 par(mfrow=c(1,1))
 
