@@ -7,7 +7,16 @@
     <description>CompBioMethods
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 26 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Generalized Linear Mixed Effect Models</title>
+      <dc:creator>Tamas Schauer</dc:creator>
+      <link>https://tschauer.github.io/blog/posts/2020-02-12-generalized-linear-mixed-effect-models</link>
+      <description>Demonstration of Generalized Linear Mixed Effect Models on microscopy data, where datapoints (cells) on a microscopy slide might not be independent.</description>
+      <guid>https://tschauer.github.io/blog/posts/2020-02-12-generalized-linear-mixed-effect-models</guid>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://tschauer.github.io/blog/posts/2020-02-12-generalized-linear-mixed-effect-models/generalized-linear-mixed-effect-models_files/figure-html5/unnamed-chunk-2-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Data Binning and Correlation</title>
       <dc:creator>Tamas Schauer</dc:creator>
