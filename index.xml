@@ -7,14 +7,14 @@
     <description>CompBioMethods
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 07 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Determining NFR width by cross-correlation</title>
       <dc:creator>Tamas Schauer</dc:creator>
       <link>https://tschauer.github.io/blog/posts/2020-02-13-determining-nfr-width-by-cross-correlation</link>
       <description>Here I use a cross-correlation method to determine the width of nucleosome-free regions in MNase-seq data.</description>
       <guid>https://tschauer.github.io/blog/posts/2020-02-13-determining-nfr-width-by-cross-correlation</guid>
-      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
       <media:content url="https://tschauer.github.io/blog/posts/2020-02-13-determining-nfr-width-by-cross-correlation/determining-nfr-width-by-cross-correlation_files/figure-html5/unnamed-chunk-6-1.png" medium="image" type="image/png" width="768" height="1152"/>
     </item>
     <item>
