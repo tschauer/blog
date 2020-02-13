@@ -1,5 +1,26 @@
 [
   {
+    "path": "posts/2020-02-13-determining-nfr-width-by-cross-correlation/",
+    "title": "Determining NFR width by cross-correlatio",
+    "description": "Here I use a cross-correlation method to determine the width of nucleosome-free regions in MNase-seq data.",
+    "author": [
+      {
+        "name": "Tamas Schauer",
+        "url": {}
+      }
+    ],
+    "date": "2020-01-08",
+    "categories": [
+      "MNase-seq",
+      "cross-correlation",
+      "nucleosome"
+    ],
+    "preview": "posts/2020-02-13-determining-nfr-width-by-cross-correlation/determining-nfr-width-by-cross-correlation_files/figure-html5/unnamed-chunk-6-1.png",
+    "last_modified": "2020-02-13T11:31:05+01:00",
+    "preview_width": 768,
+    "preview_height": 1152
+  },
+  {
     "path": "posts/2020-02-12-generalized-linear-mixed-effect-models/",
     "title": "Generalized Linear Mixed Effect Models",
     "description": "Demonstration of Generalized Linear Mixed Effect Models on microscopy data, where datapoints (cells) on a microscopy slide might not be independent.",
