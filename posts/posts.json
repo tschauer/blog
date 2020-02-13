@@ -1,7 +1,7 @@
 [
   {
     "path": "posts/2020-02-13-determining-nfr-width-by-cross-correlation/",
-    "title": "Determining NFR width by cross-correlatio",
+    "title": "Determining NFR width by cross-correlation",
     "description": "Here I use a cross-correlation method to determine the width of nucleosome-free regions in MNase-seq data.",
     "author": [
       {
@@ -16,7 +16,7 @@
       "nucleosome"
     ],
     "preview": "posts/2020-02-13-determining-nfr-width-by-cross-correlation/determining-nfr-width-by-cross-correlation_files/figure-html5/unnamed-chunk-6-1.png",
-    "last_modified": "2020-02-13T11:31:05+01:00",
+    "last_modified": "2020-02-13T11:34:06+01:00",
     "preview_width": 768,
     "preview_height": 1152
   },

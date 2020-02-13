@@ -1,5 +1,5 @@
 ---
-title: "Determining NFR width by cross-correlatio"
+title: "Determining NFR width by cross-correlation"
 description: |
   Here I use a cross-correlation method to determine the width of nucleosome-free regions in MNase-seq data.
 author:
