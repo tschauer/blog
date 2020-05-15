@@ -1,5 +1,27 @@
 [
   {
+    "path": "posts/2020-05-15-r-base-graphics-tutorial/",
+    "title": "R Base Graphics Tutorial",
+    "description": "This tutorial helps to build R base graphics functions for plotting results of differential expression analysis by DESeq2. \nThe final functions are part of HelpersforDESeq2 package (under development).",
+    "author": [
+      {
+        "name": "Tamas Schauer",
+        "url": "https://github.com/tschauer"
+      }
+    ],
+    "date": "2020-05-15",
+    "categories": [
+      "dataviz",
+      "R base graphics",
+      "RNAseq",
+      "DESeq2"
+    ],
+    "preview": "posts/2020-05-15-r-base-graphics-tutorial/r-base-graphics-tutorial_files/figure-html5/unnamed-chunk-3-1.png",
+    "last_modified": "2020-05-15T13:37:00+02:00",
+    "preview_width": 2800,
+    "preview_height": 1500
+  },
+  {
     "path": "posts/2020-02-13-determining-nfr-width-by-cross-correlation/",
     "title": "Determining NFR width by cross-correlation",
     "description": "Here I use a cross-correlation method to determine the width of nucleosome-free regions in MNase-seq data.",

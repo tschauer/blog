@@ -19,6 +19,7 @@ knitr::opts_chunk$set(echo = FALSE)
 * From basics to intermediate level
 * Applied statistical methods
 * Genomics and next generation sequencing
+* Data visualization
 
 ---
 

@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://tschauer.github.io/blog/about.html</loc>
-    <lastmod>2019-11-29T10:33:50+01:00</lastmod>
+    <lastmod>2020-05-15T12:50:10+02:00</lastmod>
   </url>
   <url>
     <loc>https://tschauer.github.io/blog/</loc>
     <lastmod>2020-02-13T11:55:50+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://tschauer.github.io/blog/posts/2020-05-15-r-base-graphics-tutorial/</loc>
+    <lastmod>2020-05-15T13:37:00+02:00</lastmod>
   </url>
   <url>
     <loc>https://tschauer.github.io/blog/posts/2020-02-13-determining-nfr-width-by-cross-correlation/</loc>

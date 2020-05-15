@@ -1,0 +1,372 @@
+---
+title: "R Base Graphics Tutorial"
+description: |
+  This tutorial helps to build R base graphics functions for plotting results of differential expression analysis by DESeq2. 
+  The final functions are part of HelpersforDESeq2 package (under development).
+author:
+  - name: "Tamas Schauer"
+    url: https://github.com/tschauer
+    affiliation: LMU - Biomedical Center
+    affiliation_url: https://www.compbio.bmc.med.uni-muenchen.de/about_us/people/index.html
+date: 2020-05-15
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 3
+base_url: https://tschauer.github.io/blog/
+twitter:
+  site: "@tamas_schauer"
+  card: summary_large_image
+categories:
+  - dataviz
+  - R base graphics
+  - RNAseq
+  - DESeq2
+repository_url: https://github.com/tschauer/blog/tree/gh-pages
+---
+
+
+
+```{r global options, include = FALSE}
+knitr::opts_chunk$set(echo=TRUE, include = TRUE, warning=FALSE, message=FALSE)
+```
+
+---
+
+## Setup
+
+### Install Package
+
+* The package is available on github. Installation is via devtools.
+* Link: https://github.com/tschauer/HelpersforDESeq2
+
+
+```{r eval=FALSE}
+library(devtools)
+install_github("tschauer/HelpersforDESeq2")
+```
+
+---
+
+### Load Example Results
+
+* Example tables can be found in the package extdata directory.
+
+```{r}
+library(HelpersforDESeq2)
+
+data_dir <- system.file("extdata/", package = "HelpersforDESeq2")
+
+res1 <- read.delim(paste0(data_dir, "res.HighMLEpATP-HighMLEmATP.txt"), row.names = 1, stringsAsFactors = F)
+res2 <- read.delim(paste0(data_dir, "res.LowMLEpATP-LowMLEmATP.txt"), row.names = 1, stringsAsFactors = F)
+
+# log10 transform baseMean
+res1$log10baseMean <- log10(res1$baseMean+1)
+res2$log10baseMean <- log10(res2$baseMean+1)
+
+head(res1)
+head(res2)
+```
+
+---
+
+## Goal
+
+* The goal is to shape the simplest scatterplot to almost publication quality. 
+
+```{r message=FALSE, warning=FALSE,results=F,echo=F, fig.align='center', fig.height=3.75, fig.width=7, dpi=200, out.width='75%'}
+par(mfrow=c(1,2), mar = c(4,4,2,2), oma = c(1,1,1,1), mgp = c(2,1,0))
+
+plot(res1$log10baseMean,
+     res1$log2FoldChange,
+     main = "before")
+
+plottingMA(res =  res1,
+           main_title = "after",
+           selection_ids = c("roX1","roX2"),
+           selection_id_type = "gene_symbol",
+           selection_point_size = 1,
+           selection_text_label = TRUE,
+           selection_shadow = FALSE,
+           xlims = c(0, 6),
+           ylims = c(-10,10),
+           x_axis_by = 2,
+           padj_cutoff = 0.01,
+           show_legend = TRUE)
+```
+
+---
+
+## Build Plot Step-by-Step
+
+* simplest scatter plot
+
+```{r message=FALSE, warning=FALSE,results=F, fig.align='center', fig.height=6, fig.width=6, dpi=200, out.width='75%'}
+par(mfrow=c(1,1), mar = c(4,4,2,2), oma = c(4,4,4,4), mgp = c(2,1,0))
+
+plot(res1$log10baseMean,
+     res1$log2FoldChange)
+```
+
+
+* shape axes and points
+
+```{r message=FALSE, warning=FALSE,results=F, fig.align='center', fig.height=6, fig.width=6, dpi=200, out.width='75%'}
+par(mfrow=c(1,1), mar = c(4,4,2,2), oma = c(4,4,4,4), mgp = c(2,1,0))
+
+plot(res1$log10baseMean,
+     res1$log2FoldChange,
+     xlab = "log10 mean counts",
+     ylab = "log2 fold change",
+     xlim = c(0,6),
+     ylim = c(-10,10),
+     col = rgb(0.7,0.7,0.7,0.5), pch=19, cex = 0.25)
+
+abline(h=0, col="grey32")
+```
+
+* add point labels
+
+```{r message=FALSE, warning=FALSE,results=F, fig.align='center', fig.height=6, fig.width=6, dpi=200, out.width='75%'}
+par(mfrow=c(1,1), mar = c(4,4,2,2), oma = c(4,4,4,4), mgp = c(2,1,0))
+
+plot(res1$log10baseMean,
+     res1$log2FoldChange,
+     xlab = "log10 mean counts",
+     ylab = "log2 fold change",
+     xlim = c(0,6),
+     ylim = c(-10,10),
+     col = rgb(0.7,0.7,0.7,0.5), pch=19, cex = 0.25)
+
+abline(h=0, col="grey32")
+
+selection_ids <- c("roX1","roX2")
+selection_vector <- res1$gene_symbol %in% selection_ids
+selection_color <- rgb(0.9,0.6,0,1)
+        
+points(res1$log10baseMean[selection_vector],
+       res1$log2FoldChange[selection_vector],
+       col = selection_color, pch=19, cex = 1.0)
+
+legend("topright", legend =  "labeled", col = selection_color,
+       bg = "white", border = NA, bty = "n", cex = 0.8, pch = 19)
+```
+
+* add point and text labels
+
+```{r message=FALSE, warning=FALSE,results=F, fig.align='center', fig.height=6, fig.width=6, dpi=200, out.width='75%'}
+par(mfrow=c(1,1), mar = c(4,4,2,2), oma = c(4,4,4,4), mgp = c(2,1,0))
+
+plot(res1$log10baseMean,
+     res1$log2FoldChange,
+     xlab = "log10 mean counts",
+     ylab = "log2 fold change",
+     xlim = c(0,6),
+     ylim = c(-10,10),
+     col = rgb(0.7,0.7,0.7,0.5), pch=19, cex = 0.25)
+
+abline(h=0, col="grey32")
+
+selection_ids <- c("roX1","roX2")
+selection_vector <- res1$gene_symbol %in% selection_ids
+selection_color <- rgb(0.8,0,0,1)
+
+points(res1$log10baseMean[selection_vector],
+       res1$log2FoldChange[selection_vector],
+       col = selection_color, pch=19, cex = 1.0)
+
+text(res1$log10baseMean[selection_vector],
+     res1$log2FoldChange[selection_vector], 
+     res1$gene_symbol[selection_vector],
+     col = selection_color, adj = c(0,-0.5))
+
+legend("topright", legend =  "labeled", col = selection_color,
+       bg = "white", border = NA, bty = "n", cex = 0.8, pch = 19)
+```
+
+* label all significant datapoints
+
+```{r message=FALSE, warning=FALSE,results=F, fig.align='center', fig.height=6, fig.width=6, dpi=200, out.width='75%'}
+par(mfrow=c(1,1), mar = c(4,4,2,2), oma = c(4,4,4,4), mgp = c(2,1,0))
+
+plot(res1$log10baseMean,
+     res1$log2FoldChange,
+     xlab = "log10 mean counts",
+     ylab = "log2 fold change",
+     xlim = c(0,6),
+     ylim = c(-10,10),
+     col = rgb(0.7,0.7,0.7,0.5), pch=19, cex = 0.25)
+
+abline(h=0, col="grey32")
+
+selection_vector <- res1$padj < 0.01
+
+points(res1$log10baseMean[selection_vector],
+       res1$log2FoldChange[selection_vector],
+       col = selection_color, pch=19, cex = 0.25)
+
+legend("topright", legend =  "significant", col = selection_color,
+       bg = "white", border = NA, bty = "n", cex = 0.8, pch = 19)
+```
+
+---
+
+### Write a function
+
+* reuse the code by writing a function
+
+```{r message=FALSE, warning=FALSE,results=F, fig.align='center', fig.height=3.75, fig.width=7, dpi=200, out.width='75%'}
+par(mfrow=c(1,2), mar = c(4,4,2,2), oma = c(1,1,1,1), mgp = c(2,1,0))
+
+plottingMAbasics <- function(res,
+                             padj_cutoff = 0.01){
+        
+        plot(res$log10baseMean,
+             res$log2FoldChange,
+             xlab = "log10 mean counts",
+             ylab = "log2 fold change",
+             xlim = c(0,6),
+             ylim = c(-10,10),
+             col = rgb(0.7,0.7,0.7,0.5), pch=19, cex = 0.25)
+        
+        abline(h=0, col="grey32")
+        
+        selection_vector <- res$padj < padj_cutoff
+        
+        points(res$log10baseMean[selection_vector],
+               res$log2FoldChange[selection_vector],
+               col = selection_color, pch=19, cex = 0.25)
+        
+        legend("topright", legend =  "significant", col = selection_color,
+               bg = "white", border = NA, bty = "n", cex = 0.8, pch = 19) 
+}
+
+plottingMAbasics(res1)
+plottingMAbasics(res2)
+
+```
+
+---
+
+### Example Case of plottingMA Function
+
+* Example of simple automatization using character string operations.
+* Check how regular expressions work (*gsub*).
+* Use *assign* and *get* to link names and objects.
+* Iterate through names.
+* This helps to avod mistakes by copy and paste.
+
+```{r message=FALSE, warning=FALSE,results=T, fig.align='center', fig.height=3.75, fig.width=7, dpi=200, out.width='75%'}
+par(mfrow=c(1,2), mar = c(4,4,2,2), oma = c(1,1,1,1), mgp = c(2,1,0))
+
+res_file_names <- c("res.HighMLEpATP-Input.txt", "res.LowMLEpATP-Input.txt")
+
+for(res_file_name in res_file_names){
+        
+        res_tmp <- read.delim(paste0(data_dir, res_file_name), row.names = 1, stringsAsFactors = F)
+        
+        res_name <- gsub(".txt","", res_file_name)
+        assign(res_name, res_tmp)
+        
+}
+
+res_names <- ls(pattern = "^res\\.")
+res_names
+
+for(res_name in res_names){
+      
+     plottingMA(res =  get(res_name),
+           main_title = gsub("res.","",res_name),
+           selection_ids = c("roX1","roX2"),
+           selection_id_type = "gene_symbol",
+           selection_point_size = 1,
+           selection_text_label = TRUE,
+           selection_shadow = FALSE,
+           xlims = c(0, 6),
+           ylims = c(-10,10),
+           x_axis_by = 2,
+           padj_cutoff = 0.01,
+           show_legend = TRUE) 
+}
+```
+
+---
+
+### Log2FC - log2FC plot
+
+* another common plot when exploring results
+
+```{r message=FALSE, warning=FALSE,results=F, fig.align='center', fig.height=6, fig.width=6, dpi=200, out.width='75%'}
+par(mfrow=c(1,1), mar = c(4,4,2,2), oma = c(4,4,4,4), mgp = c(2,1,0))
+
+res1 <- get(res_names[1])
+res2 <- get(res_names[2])
+      
+res_merged <- merge(res1, res2, by = "row.names")
+
+plot(res_merged$log2FoldChange.x,
+     res_merged$log2FoldChange.y,
+     xlab = "log2FC res1",
+     ylab = "log2FC res2",
+     xlim = c(-6,6),
+     ylim = c(-6,6),
+     col = rgb(0.7,0.7,0.7,0.5), pch=19, cex = 0.25)
+
+abline(h=0, v=0, col="grey32")
+abline(coef = c(0,1), col="grey32", lty=2)
+
+selection_ids = c("roX1","roX2")
+selection_vector <- res_merged$gene_symbol.x %in% selection_ids
+selection_color <- rgb(0.8,0,0,1)
+
+points(res_merged$log2FoldChange.x[selection_vector],
+       res_merged$log2FoldChange.y[selection_vector],
+       col = selection_color, pch=19, cex = 1.0)
+
+text(res_merged$log2FoldChange.x[selection_vector],
+     res_merged$log2FoldChange.y[selection_vector], 
+     res_merged$gene_symbol.x[selection_vector],
+     col = selection_color, adj = c(0,-0.5))
+
+legend("topleft", legend =  "labeled", col = selection_color,
+       bg = "white", cex = 1, pch = 19)
+```
+
+---
+
+### Example Case of plotLog2FC Function
+
+```{r message=FALSE, warning=FALSE,results=T, fig.align='center', fig.height=6, fig.width=6, dpi=200, out.width='75%'}
+par(mfrow=c(1,1), mar = c(5,5,1,1), oma = c(4,4,4,4), mgp = c(3,1,0))
+
+
+plotLog2FC(res1 = get(res_names[1]),
+           res2 = get(res_names[2]),
+           main_title = "",
+           x_label = paste("log2FC \n", gsub("res.","",res_names[1])),
+           y_label = paste("log2FC \n", gsub("res.","",res_names[2])),
+           lims = c(-6,6),
+           point_size = 0.25,
+           selection_ids = c("roX1","roX2"),
+           selection_id_type = "gene_symbol",
+           selection_point_size = 1,
+           selection_legend = "labeled",
+           selection_text_label = TRUE) 
+```
+
+---
+
+### Check Function Code
+
+* Link: https://github.com/tschauer/HelpersforDESeq2/tree/master/R
+
+```{r}
+plottingMA
+
+plotLog2FC
+```
+
+
+
+

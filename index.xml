@@ -7,7 +7,17 @@
     <description>CompBioMethods
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2020 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>R Base Graphics Tutorial</title>
+      <dc:creator>Tamas Schauer</dc:creator>
+      <link>https://tschauer.github.io/blog/posts/2020-05-15-r-base-graphics-tutorial</link>
+      <description>This tutorial helps to build R base graphics functions for plotting results of differential expression analysis by DESeq2. 
+The final functions are part of HelpersforDESeq2 package (under development).</description>
+      <guid>https://tschauer.github.io/blog/posts/2020-05-15-r-base-graphics-tutorial</guid>
+      <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://tschauer.github.io/blog/posts/2020-05-15-r-base-graphics-tutorial/r-base-graphics-tutorial_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="2800" height="1500"/>
+    </item>
     <item>
       <title>Determining NFR width by cross-correlation</title>
       <dc:creator>Tamas Schauer</dc:creator>
