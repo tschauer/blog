@@ -7,15 +7,30 @@
     <description>CompBioMethods
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 14 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Confidence Intervals in linear regression</title>
+      <dc:creator>Tamas Schauer</dc:creator>
+      <link>https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression</link>
+      <description>A short description of the post.</description>
+      <category>statistics</category>
+      <category>dataviz</category>
+      <guid>https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression</guid>
+      <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression/confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-8-1.png" medium="image" type="image/png" width="4800" height="2800"/>
+    </item>
     <item>
       <title>R Base Graphics Tutorial</title>
       <dc:creator>Tamas Schauer</dc:creator>
       <link>https://tschauer.github.io/blog/posts/2020-05-15-r-base-graphics-tutorial</link>
       <description>This tutorial helps to build R base graphics functions for plotting results of differential expression analysis by DESeq2. 
 The final functions are part of HelpersforDESeq2 package (under development).</description>
+      <category>dataviz</category>
+      <category>R base graphics</category>
+      <category>RNAseq</category>
+      <category>DESeq2</category>
       <guid>https://tschauer.github.io/blog/posts/2020-05-15-r-base-graphics-tutorial</guid>
-      <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
       <media:content url="https://tschauer.github.io/blog/posts/2020-05-15-r-base-graphics-tutorial/r-base-graphics-tutorial_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="2800" height="1500"/>
     </item>
     <item>
@@ -23,6 +38,9 @@ The final functions are part of HelpersforDESeq2 package (under development).</d
       <dc:creator>Tamas Schauer</dc:creator>
       <link>https://tschauer.github.io/blog/posts/2020-02-13-determining-nfr-width-by-cross-correlation</link>
       <description>Here I use a cross-correlation method to determine the width of nucleosome-free regions in MNase-seq data.</description>
+      <category>MNase-seq</category>
+      <category>cross-correlation</category>
+      <category>nucleosome</category>
       <guid>https://tschauer.github.io/blog/posts/2020-02-13-determining-nfr-width-by-cross-correlation</guid>
       <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
       <media:content url="https://tschauer.github.io/blog/posts/2020-02-13-determining-nfr-width-by-cross-correlation/determining-nfr-width-by-cross-correlation_files/figure-html5/unnamed-chunk-6-1.png" medium="image" type="image/png" width="768" height="1152"/>
@@ -32,6 +50,9 @@ The final functions are part of HelpersforDESeq2 package (under development).</d
       <dc:creator>Tamas Schauer</dc:creator>
       <link>https://tschauer.github.io/blog/posts/2020-02-12-generalized-linear-mixed-effect-models</link>
       <description>Demonstration of Generalized Linear Mixed Effect Models on microscopy data, where datapoints (cells) on a microscopy slide might not be independent.</description>
+      <category>statistics</category>
+      <category>generalized linear mixed effect models</category>
+      <category>microscopy data</category>
       <guid>https://tschauer.github.io/blog/posts/2020-02-12-generalized-linear-mixed-effect-models</guid>
       <pubDate>Fri, 29 Nov 2019 00:00:00 +0000</pubDate>
       <media:content url="https://tschauer.github.io/blog/posts/2020-02-12-generalized-linear-mixed-effect-models/generalized-linear-mixed-effect-models_files/figure-html5/unnamed-chunk-2-1.png" medium="image" type="image/png" width="1248" height="768"/>
@@ -41,6 +62,8 @@ The final functions are part of HelpersforDESeq2 package (under development).</d
       <dc:creator>Tamas Schauer</dc:creator>
       <link>https://tschauer.github.io/blog/posts/2019-11-29-data-binning-and-correlation</link>
       <description>Averaging data in equal sized bins falsifies weak assosciations to strong.</description>
+      <category>statistics</category>
+      <category>falsification</category>
       <guid>https://tschauer.github.io/blog/posts/2019-11-29-data-binning-and-correlation</guid>
       <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
       <media:content url="https://tschauer.github.io/blog/posts/2019-11-29-data-binning-and-correlation/data-binning-and-correlation_files/figure-html5/unnamed-chunk-4-1.png" medium="image" type="image/png" width="1920" height="1920"/>
@@ -50,6 +73,9 @@ The final functions are part of HelpersforDESeq2 package (under development).</d
       <dc:creator>Tamas Schauer</dc:creator>
       <link>https://tschauer.github.io/blog/posts/2019-11-28-k-means-clustering-femalemale-embryos</link>
       <description>Drosophila female and male embryos can be distinguished using k-means clustering on marker genes from RNA-seq data.</description>
+      <category>k-means</category>
+      <category>RNAseq</category>
+      <category>Drosophila</category>
       <guid>https://tschauer.github.io/blog/posts/2019-11-28-k-means-clustering-femalemale-embryos</guid>
       <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
       <media:content url="https://tschauer.github.io/blog/posts/2019-11-28-k-means-clustering-femalemale-embryos/k-means-clustering-femalemale-embryos_files/figure-html5/unnamed-chunk-8-1.png" medium="image" type="image/png" width="1920" height="1920"/>
@@ -59,6 +85,7 @@ The final functions are part of HelpersforDESeq2 package (under development).</d
       <dc:creator>Tamas Schauer</dc:creator>
       <link>https://tschauer.github.io/blog/posts/welcome</link>
       <description>Welcome to the new blog format of CompBioMethods.</description>
+      <category>welcome</category>
       <guid>https://tschauer.github.io/blog/posts/welcome</guid>
       <pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate>
     </item>

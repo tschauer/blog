@@ -19,54 +19,55 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-<title>CompBioMethods: K-Means Clustering - Female/Male Embryos</title>
+<title>CompBioMethods: Confidence Intervals in linear regression</title>
 
-<meta property="description" itemprop="description" content="Drosophila female and male embryos can be distinguished using k-means clustering on marker genes from RNA-seq data."/>
+<meta property="description" itemprop="description" content="A short description of the post."/>
 
-<link rel="canonical" href="https://tschauer.github.io/blog/posts/2019-11-28-k-means-clustering-femalemale-embryos/"/>
+<link rel="canonical" href="https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2019-11-20"/>
-<meta property="article:created" itemprop="dateCreated" content="2019-11-20"/>
+<meta property="article:published" itemprop="datePublished" content="2020-09-17"/>
+<meta property="article:created" itemprop="dateCreated" content="2020-09-17"/>
 <meta name="article:author" content="Tamas Schauer"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="CompBioMethods: K-Means Clustering - Female/Male Embryos"/>
+<meta property="og:title" content="CompBioMethods: Confidence Intervals in linear regression"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Drosophila female and male embryos can be distinguished using k-means clustering on marker genes from RNA-seq data."/>
-<meta property="og:url" content="https://tschauer.github.io/blog/posts/2019-11-28-k-means-clustering-femalemale-embryos/"/>
-<meta property="og:image" content="https://tschauer.github.io/blog/posts/2019-11-28-k-means-clustering-femalemale-embryos/k-means-clustering-femalemale-embryos_files/figure-html5/unnamed-chunk-8-1.png"/>
-<meta property="og:image:width" content="1920"/>
-<meta property="og:image:height" content="1920"/>
+<meta property="og:description" content="A short description of the post."/>
+<meta property="og:url" content="https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression/"/>
+<meta property="og:image" content="https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression/confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-8-1.png"/>
+<meta property="og:image:width" content="4800"/>
+<meta property="og:image:height" content="2800"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="CompBioMethods"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="CompBioMethods: K-Means Clustering - Female/Male Embryos"/>
-<meta property="twitter:description" content="Drosophila female and male embryos can be distinguished using k-means clustering on marker genes from RNA-seq data."/>
-<meta property="twitter:url" content="https://tschauer.github.io/blog/posts/2019-11-28-k-means-clustering-femalemale-embryos/"/>
-<meta property="twitter:image" content="https://tschauer.github.io/blog/posts/2019-11-28-k-means-clustering-femalemale-embryos/k-means-clustering-femalemale-embryos_files/figure-html5/unnamed-chunk-8-1.png"/>
-<meta property="twitter:image:width" content="1920"/>
-<meta property="twitter:image:height" content="1920"/>
+<meta property="twitter:title" content="CompBioMethods: Confidence Intervals in linear regression"/>
+<meta property="twitter:description" content="A short description of the post."/>
+<meta property="twitter:url" content="https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression/"/>
+<meta property="twitter:image" content="https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression/confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-8-1.png"/>
+<meta property="twitter:image:width" content="4800"/>
+<meta property="twitter:image:height" content="2800"/>
 <meta property="twitter:site" content="@tamas_schauer"/>
 
 <!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
-<meta name="citation_title" content="CompBioMethods: K-Means Clustering - Female/Male Embryos"/>
-<meta name="citation_fulltext_html_url" content="https://tschauer.github.io/blog/posts/2019-11-28-k-means-clustering-femalemale-embryos/"/>
-<meta name="citation_online_date" content="2019/11/20"/>
-<meta name="citation_publication_date" content="2019/11/20"/>
+<meta name="citation_title" content="CompBioMethods: Confidence Intervals in linear regression"/>
+<meta name="citation_fulltext_html_url" content="https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression/"/>
+<meta name="citation_online_date" content="2020/09/17"/>
+<meta name="citation_publication_date" content="2020/09/17"/>
 <meta name="citation_author" content="Tamas Schauer"/>
+<meta name="citation_author_institution" content="LMU - Biomedical Center"/>
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","base_url","twitter","categories","repository_url","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["K-Means Clustering - Female/Male Embryos"]},{"type":"character","attributes":{},"value":["Drosophila female and male embryos can be distinguished using k-means clustering on marker genes from RNA-seq data."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Tamas Schauer"]}]}]},{"type":"character","attributes":{},"value":["2019-11-20"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]},{"type":"character","attributes":{},"value":["https://tschauer.github.io/blog/"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["site","card"]}},"value":[{"type":"character","attributes":{},"value":["@tamas_schauer"]},{"type":"character","attributes":{},"value":["summary_large_image"]}]},{"type":"character","attributes":{},"value":["k-means","RNAseq","Drosophila"]},{"type":"character","attributes":{},"value":["https://github.com/tschauer/blog/tree/gh-pages"]},{"type":"character","attributes":{},"value":["https://tschauer.github.io/blog/posts/2019-11-28-k-means-clustering-femalemale-embryos/"]},{"type":"character","attributes":{},"value":["https://tschauer.github.io/blog/posts/2019-11-28-k-means-clustering-femalemale-embryos/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","base_url","twitter","categories","repository_url","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Confidence Intervals in linear regression"]},{"type":"character","attributes":{},"value":["A short description of the post."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Tamas Schauer"]},{"type":"character","attributes":{},"value":["https://github.com/tschauer"]},{"type":"character","attributes":{},"value":["LMU - Biomedical Center"]},{"type":"character","attributes":{},"value":["https://www.compbio.bmc.med.uni-muenchen.de/about_us/people/index.html"]}]}]},{"type":"character","attributes":{},"value":["2020-09-17"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]},{"type":"character","attributes":{},"value":["https://tschauer.github.io/blog/"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["site","card"]}},"value":[{"type":"character","attributes":{},"value":["@tamas_schauer"]},{"type":"character","attributes":{},"value":["summary_large_image"]}]},{"type":"character","attributes":{},"value":["statistics","dataviz"]},{"type":"character","attributes":{},"value":["https://github.com/tschauer/blog/tree/gh-pages"]},{"type":"character","attributes":{},"value":["https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression/"]},{"type":"character","attributes":{},"value":["https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["data_Kmeans/count_table.txt","data_Kmeans/txdb","k-means-clustering-femalemale-embryos_files/bowser-1.9.3/bowser.min.js","k-means-clustering-femalemale-embryos_files/distill-2.2.21/template.v2.js","k-means-clustering-femalemale-embryos_files/figure-html5/unnamed-chunk-8-1.png","k-means-clustering-femalemale-embryos_files/jquery-1.11.3/jquery.min.js","k-means-clustering-femalemale-embryos_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["confidence-intervals-in-linear-regression_files/bowser-1.9.3/bowser.min.js","confidence-intervals-in-linear-regression_files/distill-2.2.21/template.v2.js","confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-11-1.png","confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-12-1.png","confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-3-1.png","confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-4-1.png","confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-5-1.png","confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-6-1.png","confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-7-1.png","confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-8-1.png","confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-9-1.png","confidence-intervals-in-linear-regression_files/jquery-1.11.3/jquery.min.js","confidence-intervals-in-linear-regression_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 
@@ -1313,7 +1314,7 @@ gtag('config', 'UA-158382933-1');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"K-Means Clustering - Female/Male Embryos","description":"Drosophila female and male embryos can be distinguished using k-means clustering on marker genes from RNA-seq data.","authors":[{"author":"Tamas Schauer","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2019-11-20T00:00:00.000+01:00","citationText":"Schauer, 2019"}
+{"title":"Confidence Intervals in linear regression","description":"A short description of the post.","authors":[{"author":"Tamas Schauer","authorURL":"https://github.com/tschauer","affiliation":"LMU - Biomedical Center","affiliationURL":"https://www.compbio.bmc.med.uni-muenchen.de/about_us/people/index.html"}],"publishedDate":"2020-09-17T00:00:00.000+02:00","citationText":"Schauer, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1341,268 +1342,272 @@ gtag('config', 'UA-158382933-1');
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>K-Means Clustering - Female/Male Embryos</h1>
-<p>Drosophila female and male embryos can be distinguished using k-means clustering on marker genes from RNA-seq data.</p>
+<h1>Confidence Intervals in linear regression</h1>
+<p>A short description of the post.</p>
 </div>
 
 <div class="d-byline">
-  Tamas Schauer  
+  Tamas Schauer <a href="https://github.com/tschauer" class="uri">https://github.com/tschauer</a> (LMU - Biomedical Center)<a href="https://www.compbio.bmc.med.uni-muenchen.de/about_us/people/index.html" class="uri">https://www.compbio.bmc.med.uni-muenchen.de/about_us/people/index.html</a>
   
-<br/>2019-11-20
+<br/>2020-09-17
 </div>
 
 <div class="d-article">
 <h3 class="d-toc-header">Table of Contents</h3>
 <nav class="d-toc" id="TOC">
 <ul>
-<li><a href="#embryo-rna-seq-data">Embryo RNA-seq Data</a><ul>
-<li><a href="#pre-processing">Pre-processing</a></li>
-<li><a href="#annotation">Annotation</a></li>
-<li><a href="#count-table">Count Table</a></li>
-<li><a href="#filtering-and-normalization">Filtering and Normalization</a></li>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#linear-regression">Linear regression</a><ul>
+<li><a href="#fit-summary">Fit Summary</a></li>
+<li><a href="#confidence-intervals">Confidence intervals</a></li>
 </ul></li>
-<li><a href="#k-means-clustering">K-means Clustering</a><ul>
-<li><a href="#clustering-with-k3">Clustering with k=3</a></li>
-<li><a href="#plot-marker-genes">Plot Marker Genes</a></li>
+<li><a href="#plot">Plot</a><ul>
+<li><a href="#base-graphics">Base graphics</a></li>
+<li><a href="#ggplot">ggplot</a></li>
 </ul></li>
-<li><a href="#conclusions">Conclusions</a></li>
-<li><a href="#data-source">Data Source</a></li>
-<li><a href="#references">References</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator"/>
 <hr />
-<h2 id="embryo-rna-seq-data">Embryo RNA-seq Data</h2>
-<ul>
-<li>time course experiment of individual Drosophila embryos</li>
-<li>the time spans up to 12 hours in development</li>
-<li>during this time key sex determination genes get activated</li>
-<li>goal: distinguish which embryo is female or male</li>
-</ul>
-<hr />
-<h3 id="pre-processing">Pre-processing</h3>
-<ul>
-<li>alignment and count table was generated using STAR</li>
-</ul>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="bash"><code>
-# do not run here
-module load ngs/STAR/2.5.3a
-module load ngs/samtools
-
-### STAR index directory ###
-STAR_INDEX=&quot;../genome/STAR_dmel-all-chromosome-r6.17&quot;
-
-### GTF file ###
-GTF_FILE=&quot;../genome/dmel-all-r6.17.gtf&quot;
-
-# STAR run
-STAR \
---runThreadN 8 \
---readFilesCommand gunzip -c \
---quantMode GeneCounts \
---genomeDir ${STAR_INDEX} \
---sjdbGTFfile ${GTF_FILE} \
---readFilesIn ${FILEBASE}_1.txt.gz ${FILEBASE}_2.txt.gz \
---outFileNamePrefix ${FILEBASE}. \
---outSAMtype BAM SortedByCoordinate \
---limitBAMsortRAM 5000000000 \
---outFilterMultimapNmax 1</code></pre>
-</div>
-<h3 id="annotation">Annotation</h3>
-<ul>
-<li>annotation is derived from the same GTF (loaded as txdb)</li>
-</ul>
+<h2 id="setup">Setup</h2>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-library(AnnotationDbi)
-library(GenomicFeatures)
+set.seed(6)
 
-txdb = loadDb(&quot;data_Kmeans/txdb&quot;)
+n1 &lt;- 10
+n2 &lt;- 50
 
-my_exons &lt;- exons(txdb)
+x1 &lt;- rnorm(n1, sd=2)
+y1 &lt;- 5 + 2*x1 + rnorm(n1, sd=1)
 
-exons.list.per.gene &lt;- exonsBy(txdb, by=&quot;gene&quot;)
-exonic.gene.sizes &lt;- sum(width(reduce(exons.list.per.gene))) / 1000
+x2 &lt;- rnorm(n2, sd=2)
+y2 &lt;- 10 + 1*x2 + rnorm(n2, sd=1)
 
-head(exonic.gene.sizes)</code></pre>
+x &lt;- c(x1,x2)
+y &lt;- c(y1,y2)
+
+df &lt;- data.frame(x = x, 
+                 y = y,
+                 group = factor(c(rep(&quot;g1&quot;, n1), 
+                                  rep(&quot;g2&quot;, n2))))
+
+head(df)</code></pre>
 <pre><code>
-FBgn0000003 FBgn0000008 FBgn0000014 FBgn0000015 FBgn0000017 
-      0.299       5.414       5.477      11.791      12.819 
-FBgn0000018 
-      1.794 </code></pre>
+            x         y group
+1  0.53921196  7.806275    g1
+2 -1.25997083  1.301459    g1
+3  1.73731966  9.127846    g1
+4  3.45439103 11.540216    g1
+5  0.04837528  4.497196    g1
+6  0.73605035  6.526706    g1</code></pre>
 </div>
-<h3 id="count-table">Count Table</h3>
+<h2 id="linear-regression">Linear regression</h2>
+<h3 id="fit-summary">Fit Summary</h3>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-# read data from text file
-my_counts &lt;- read.table(&quot;data_Kmeans/count_table.txt&quot;, header = T, row.names = 1)
+fit1 &lt;- lm(y1 ~ x1)
+summary(fit1)</code></pre>
+<pre><code>
+Call:
+lm(formula = y1 ~ x1)
 
-my_counts[1:6,1:8]</code></pre>
-<pre><code>
-             E1B  E1C  E1D  E1G  E1H  E2B  E2C  E2D
-FBgn0000003   76   15   23   23   12   68   22   14
-FBgn0000008 1395  676  875  699  439   34   23   19
-FBgn0000014    1    0    0    0    1   88   34   47
-FBgn0000015    0    0    0    0    2   19   19   11
-FBgn0000017 4222 2186 2614 2784 1523 2850 1718 2083
-FBgn0000018  908  364  515  278  253   36   15   19</code></pre>
-<pre class="r"><code>
-dim(my_counts)</code></pre>
-<pre><code>
-[1] 17485    54</code></pre>
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.8987 -0.8493  0.1223  0.7652  1.5437 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   5.3448     0.3715  14.389 5.32e-07 ***
+x1            1.7021     0.2116   8.044 4.20e-05 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 1.166 on 8 degrees of freedom
+Multiple R-squared:   0.89, Adjusted R-squared:  0.8762 
+F-statistic: 64.71 on 1 and 8 DF,  p-value: 4.197e-05</code></pre>
 </div>
-<hr />
-<h3 id="filtering-and-normalization">Filtering and Normalization</h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+fit2 &lt;- lm(y2 ~ x2)
+summary(fit2)</code></pre>
+<pre><code>
+Call:
+lm(formula = y2 ~ x2)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.8842 -0.6105 -0.1154  0.6376  2.6806 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  9.91357    0.13962   71.01   &lt;2e-16 ***
+x2           0.98965    0.07134   13.87   &lt;2e-16 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 0.9819 on 48 degrees of freedom
+Multiple R-squared:  0.8003,    Adjusted R-squared:  0.7962 
+F-statistic: 192.4 on 1 and 48 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+fit &lt;- lm(y ~ group + x + group:x, data = df)
+summary(fit)</code></pre>
+<pre><code>
+Call:
+lm(formula = y ~ group + x + group:x, data = df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.8987 -0.6329 -0.1012  0.6637  2.6806 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   5.3448     0.3218  16.608  &lt; 2e-16 ***
+groupg2       4.5688     0.3524  12.964  &lt; 2e-16 ***
+x             1.7021     0.1833   9.285 6.27e-13 ***
+groupg2:x    -0.7125     0.1975  -3.608 0.000659 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 1.01 on 56 degrees of freedom
+Multiple R-squared:  0.877, Adjusted R-squared:  0.8704 
+F-statistic: 133.1 on 3 and 56 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<!-- ### Diagnostics -->
+<!-- ```{r, fig.align='center', fig.height=6, fig.width=6, dpi=200, out.width='75%'} -->
+<!-- par(mfrow=c(2,2)) -->
+<!-- plot(fit1, pch=20) -->
+<!-- ``` -->
+<!-- ```{r, fig.align='center', fig.height=6, fig.width=6, dpi=200, out.width='75%'} -->
+<!-- par(mfrow=c(2,2)) -->
+<!-- plot(fit2, pch=20) -->
+<!-- ``` -->
+<!-- ```{r, fig.align='center', fig.height=6, fig.width=6, dpi=200, out.width='75%'} -->
+<!-- par(mfrow=c(2,2)) -->
+<!-- plot(fit, pch=20) -->
+<!-- ``` -->
+<h3 id="confidence-intervals">Confidence intervals</h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+pred1 &lt;- data.frame(x1 = seq(min(x1),max(x1),0.1))
+pred1 &lt;- cbind(pred1, predict(object = fit1, newdata = pred1, interval = &quot;confidence&quot;))
+
+head(pred1)</code></pre>
+<pre><code>
+         x1       fit        lwr      upr
+1 -2.618409 0.8879563 -0.7334178 2.509330
+2 -2.518409 1.0581684 -0.5218678 2.638205
+3 -2.418409 1.2283806 -0.3107546 2.767516
+4 -2.318409 1.3985927 -0.1001139 2.897299
+5 -2.218409 1.5688049  0.1100149 3.027595
+6 -2.118409 1.7390170  0.3195888 3.158445</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+pred2 &lt;- data.frame(x2 = seq(min(x2), max(x2),0.1))
+pred2 &lt;- cbind(pred2, predict(object = fit2, newdata = pred2, interval = &quot;confidence&quot;))
+
+head(pred2)</code></pre>
+<pre><code>
+         x2      fit      lwr      upr
+1 -3.220099 6.726804 6.211664 7.241944
+2 -3.120099 6.825769 6.322623 7.328914
+3 -3.020099 6.924734 6.433457 7.416010
+4 -2.920099 7.023698 6.544156 7.503241
+5 -2.820099 7.122663 6.654708 7.590618
+6 -2.720099 7.221628 6.765105 7.678151</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+pred &lt;- data.frame(x = rep(seq(min(x),max(x),0.1), each=2), group = c(&quot;g1&quot;,&quot;g2&quot;))
+pred &lt;- cbind(pred, predict(object = fit, newdata = pred, interval = &quot;confidence&quot;))
+
+head(pred)</code></pre>
+<pre><code>
+          x group         fit       lwr      upr
+1 -3.220099    g1 -0.13619325 -1.549365 1.276979
+2 -3.220099    g2  6.72680387  6.198727 7.254880
+3 -3.120099    g1  0.03401889 -1.346512 1.414549
+4 -3.120099    g2  6.82576869  6.309988 7.341549
+5 -3.020099    g1  0.20423104 -1.143868 1.552330
+6 -3.020099    g2  6.92473351  6.421120 7.428347</code></pre>
+</div>
+<h2 id="plot">Plot</h2>
+<h3 id="base-graphics">Base graphics</h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+par(mfrow=c(1,2), mar = c(4,4,4,4))
+
+plot(y1 ~ x1, pch = 19, col = 1, 
+     xlab = &quot;x&quot;, ylab = &quot;y&quot;,
+     xlim = c(-5,6), ylim = c(-5,20))
+
+points(y2 ~ x2, pch = 19, col = 2)
+
+polygon(x = c(pred1$x1, rev(pred1$x1)), y = c(pred1$lwr, rev(pred1$upr)), col = &quot;#DDDDDD88&quot;, border = NA)
+polygon(x = c(pred2$x2, rev(pred2$x2)), y = c(pred2$lwr, rev(pred2$upr)), col = &quot;#DDDDDD88&quot;, border = NA)
+
+lines(fit ~ x1, data = pred1, col=&quot;#666666&quot;, lwd=2)
+lines(fit ~ x2, data = pred2, col=&quot;#666666&quot;, lwd=2)
+
+
+plot(y ~ x, data = df,
+     pch = 19, col = df$group, 
+     xlim = c(-5,6), ylim = c(-5,20))
+
+pred_g1 &lt;- pred[pred$group == &quot;g1&quot;,]
+pred_g2 &lt;- pred[pred$group == &quot;g2&quot;,]
+
+polygon(x = c(pred_g1$x, rev(pred_g1$x)), y = c(pred_g1$lwr, rev(pred_g1$upr)), col = &quot;#DDDDDD88&quot;, border = NA)
+polygon(x = c(pred_g2$x, rev(pred_g2$x)), y = c(pred_g2$lwr, rev(pred_g2$upr)), col = &quot;#DDDDDD88&quot;, border = NA)
+
+lines(fit ~ x, data = pred_g1, col=&quot;#666666&quot;, lwd=2)
+lines(fit ~ x, data = pred_g2, col=&quot;#666666&quot;, lwd=2)</code></pre>
+<p><img src="confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-8-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
 <ul>
-<li>TPM normalization makes sure that samples and genes are comparable
-<ul>
-<li>first normalize by exonic gene length</li>
-<li>second normalize by the sum of length corrected counts</li>
-</ul></li>
+<li>compare left and right: slopes are the same</li>
+<li>confidence intervals different</li>
+<li>it is beneficial to fit combined model (assumption should be checked though)</li>
 </ul>
+<h3 id="ggplot">ggplot</h3>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-# function to calculate TPM (see reference below)
-countToTpm &lt;- function(counts, effLen, scaler=1e6)
-{
-      rate &lt;- log(counts) - log(effLen)
-      denom &lt;- log(sum(exp(rate)))
-      exp(rate - denom + log(scaler))
-}</code></pre>
+library(ggplot2)
+library(ggpubr)
+
+gg1 &lt;- ggplot(df, aes(x=x, y=y, group = group)) + 
+      theme_bw() +
+      theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(),
+            text = element_text(size=18)) +
+      coord_cartesian(xlim = c(-5,6), ylim = c(-5,20)) + 
+      geom_point(aes(colour = group), size = 2) +
+      geom_smooth(method=lm, formula = y ~ x, se = TRUE,  aes(group = group), 
+                  colour=&#39;#666666&#39; , fill=&#39;#DDDDDD&#39;, alpha = 0.5) +
+      scale_color_manual(values=c(&quot;black&quot;, &quot;red&quot;))
+
+
+gg2 &lt;- ggplot(df, aes(x=x, y=y, fill = group)) + 
+      theme_bw() +
+      theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(),
+            text = element_text(size=18)) +
+      coord_cartesian(xlim = c(-5,6), ylim = c(-5,20)) + 
+      geom_point(aes(colour = group), size = 2) +
+      geom_ribbon(data = pred, aes(x=x, y=fit,ymin = lwr, ymax = upr, group = group), 
+                  fill=&#39;#DDDDDD&#39;, alpha = 0.5) +
+      geom_line(data = pred, aes(y = fit), size = 1, colour=&quot;#666666&quot;) +
+      scale_color_manual(values=c(&quot;black&quot;, &quot;red&quot;))
+
+ggarrange(gg1, gg2,
+          ncol = 2, nrow = 1)</code></pre>
+<p><img src="confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-9-1.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-# select genes
-my_counts_Genes &lt;- my_counts[grep(&quot;FBgn&quot;, rownames(my_counts)),]
-
-# filter low counts
-my_filter &lt;- apply(my_counts_Genes, 1, function(x) length(x[x&gt;20]) &gt;= ncol(my_counts_Genes)/12)
-
-my_counts_Filtered &lt;- my_counts_Genes[my_filter,]
-
-# match filtered genes and exonic gene sizes
-my_genes_Filtered &lt;- intersect(rownames(my_counts_Filtered), names(exonic.gene.sizes))
-
-exonic.gene.sizes &lt;- exonic.gene.sizes[names(exonic.gene.sizes) %in% my_genes_Filtered]
-exonic.gene.sizes &lt;- exonic.gene.sizes[order(names(exonic.gene.sizes))]
-
-my_counts_Filtered &lt;- my_counts_Filtered[rownames(my_counts_Filtered) %in% my_genes_Filtered,]
-my_counts_Filtered &lt;- my_counts_Filtered[order(rownames(my_counts_Filtered)),]
-
-# check whether names are identical
-stopifnot(identical(rownames(my_counts_Filtered), names(exonic.gene.sizes)))
-
-# calculate TPM
-my_TPM &lt;- apply(my_counts_Filtered, 2, FUN = function(x){countToTpm(x, exonic.gene.sizes)})
-
-# take log
-log2_TPM &lt;- log2(my_TPM+0.5)
-
-log2_TPM[1:6,1:6]</code></pre>
-<pre><code>
-                   E1B       E1C       E1D       E1G        E1H
-FBgn0000003  5.4913503  4.296149  4.656480  4.753028  4.3757731
-FBgn0000008  5.5107778  5.589526  5.712513  5.489284  5.3727542
-FBgn0000014 -0.9106273 -1.000000 -1.000000 -1.000000 -0.7559121
-FBgn0000015 -1.0000000 -1.000000 -1.000000 -1.000000 -0.7719412
-FBgn0000017  5.8614745  6.035190  6.045044  6.233035  5.9183222
-FBgn0000018  6.4770042  6.284183  6.535293  5.749910  6.1637671
-                   E2B
-FBgn0000003 6.23310042
-FBgn0000008 1.35804085
-FBgn0000014 2.53083317
-FBgn0000015 0.04186372
-FBgn0000017 6.20060925
-FBgn0000018 2.82643640</code></pre>
-<pre class="r"><code>
-dim(log2_TPM)</code></pre>
-<pre><code>
-[1] 8983   54</code></pre>
-</div>
-<hr />
-<h1 id="k-means-clustering">K-means Clustering</h1>
-<h3 id="clustering-with-k3">Clustering with k=3</h3>
 <ul>
-<li>first embryo is before sex determination is initiated</li>
-<li>that´s why we set k = 3 (early, female and male)</li>
+<li>it looks the same as base graphics</li>
+<li><code>geom_smooth()</code> is not the best choice because it fits 2 independent lines</li>
+<li>add confidence intervals calculated by <code>predict()</code> using <code>geom_ribbon()</code></li>
 </ul>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-library(org.Dm.eg.db)
-
-# select well known sex-specific marker genes
-my_favorite_genes &lt;- c(&quot;Sxl&quot;, &quot;msl-2&quot; ,&quot;lncRNA:roX1&quot;, &quot;lncRNA:roX2&quot;)
-names(my_favorite_genes) &lt;- mapIds(org.Dm.eg.db, my_favorite_genes, &quot;FLYBASE&quot;, keytype=&quot;SYMBOL&quot;, multiVals=&quot;first&quot;)
-
-set.seed(99)
-
-# k-means with k=3
-kmeans_clusters &lt;- kmeans(apply(log2_TPM[ rownames(log2_TPM) %in% names(my_favorite_genes), ], 1, 
-                         function(x){ (x-mean(x))/sd(x) }),3, nstart=25, iter.max=1000)
-
-my_sexes &lt;- factor(as.integer(kmeans_clusters$cluster))
-
-head(my_sexes)</code></pre>
-<pre><code>
-[1] 1 1 1 1 1 2
-Levels: 1 2 3</code></pre>
-</div>
-<h3 id="plot-marker-genes">Plot Marker Genes</h3>
-<ul>
-<li>plot TPM values to see sex-specific pattern</li>
-</ul>
-<div class="layout-chunk" data-layout="l-body">
-
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-# conditions
-my_conditions &lt;- factor(substr(colnames(log2_TPM),1,2))
-
-# setup color
-my_color_palette &lt;- c(&quot;#999999&quot;, &quot;#d6604d&quot;, &quot;#4393c3&quot;)
-
-par(mfrow=c(2,2), oma=c(2,2,2,2), cex=1.25)
-
-# iterate through marker genes
-for(i in seq_along(my_favorite_genes)){
-    
-    plotDots(log2_TPM[rownames(log2_TPM) == names(my_favorite_genes)[i],], 
-                     my_title = my_favorite_genes[i], 
-                     color_palette = my_color_palette, 
-                     color_groups = my_sexes, 
-                     conditions = my_conditions, 
-                     point_size = 0.8)
-}
-
-mtext(text = &quot;Stages&quot;, side = 1, line = -2, outer = TRUE, cex=1.5)
-mtext(text = &quot;log2 TPM&quot;, side = 2, outer = TRUE, cex=1.5)
-
-par(fig = c(0,1,0,1), cex=1.25, new = TRUE)
-plot(0,0, xlab=&quot;&quot;, ylab=&quot;&quot;, xaxt=&quot;n&quot;, yaxt=&quot;n&quot;, bty=&quot;n&quot;, type=&quot;n&quot; )
-legend(&quot;center&quot;, legend = c(&quot;Early&quot;, &quot;Female&quot;, &quot;Male&quot;), 
-       pch = 19, col = my_color_palette, horiz = T, )</code></pre>
-<p><img src="k-means-clustering-femalemale-embryos_files/figure-html5/unnamed-chunk-8-1.png" width="960" data-distill-preview=1 /></p>
-</div>
-<hr />
-<h1 id="conclusions">Conclusions</h1>
-<ul>
-<li>Expected sex-specific pattern:
-<ul>
-<li>Sxl is female, whereas msl-2 male specifc</li>
-<li>roX1 is unspecfic until it becomes male specific</li>
-<li>roX2 expression is activated later only in males</li>
-</ul></li>
-<li>Using RNA-seq expression of known sex-specific genes one can easily distinguish between female and male embryos</li>
-</ul>
-<hr />
-<h1 id="data-source">Data Source</h1>
-<p>The dataset was generated by Tamas Schauer (LMU, BMC, Becker group)</p>
-<hr />
-<h1 id="references">References</h1>
-<p>Progressive dosage compensation during Drosophila embryogenesis is reflected by gene arrangement. Prayitno K, Schauer T, Regnard C, Becker PB. EMBO Rep. 2019 Aug;20(8):e48138. doi: 10.15252/embr.201948138. Epub 2019 Jul 9. PMID: 31286660</p>
-<p>TPM calculation: <a href="https://haroldpimentel.wordpress.com/2014/05/08/what-the-fpkm-a-review-rna-seq-expression-units/" class="uri">https://haroldpimentel.wordpress.com/2014/05/08/what-the-fpkm-a-review-rna-seq-expression-units/</a></p>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1619,13 +1624,13 @@ legend(&quot;center&quot;, legend = c(&quot;Early&quot;, &quot;Female&quot;, &qu
   <p>If you see mistakes or want to suggest changes, please <a href="https://github.com/tschauer/blog/tree/gh-pages/issues/new">create an issue</a> on the source repository.</p>
   <h3 id="citation">Citation</h3>
   <p>For attribution, please cite this work as</p>
-  <pre class="citation-appendix short">Schauer (2019, Nov. 20). CompBioMethods: K-Means Clustering - Female/Male Embryos. Retrieved from https://tschauer.github.io/blog/posts/2019-11-28-k-means-clustering-femalemale-embryos/</pre>
+  <pre class="citation-appendix short">Schauer (2020, Sept. 17). CompBioMethods: Confidence Intervals in linear regression. Retrieved from https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression/</pre>
   <p>BibTeX citation</p>
-  <pre class="citation-appendix long">@misc{schauer2019k-means,
+  <pre class="citation-appendix long">@misc{schauer2020confidence,
   author = {Schauer, Tamas},
-  title = {CompBioMethods: K-Means Clustering - Female/Male Embryos},
-  url = {https://tschauer.github.io/blog/posts/2019-11-28-k-means-clustering-femalemale-embryos/},
-  year = {2019}
+  title = {CompBioMethods: Confidence Intervals in linear regression},
+  url = {https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression/},
+  year = {2020}
 }</pre>
 </div>
 <!--/radix_placeholder_appendices-->

@@ -1,5 +1,26 @@
 [
   {
+    "path": "posts/2020-09-17-confidence-intervals-in-linear-regression/",
+    "title": "Confidence Intervals in linear regression",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Tamas Schauer",
+        "url": "https://github.com/tschauer"
+      }
+    ],
+    "date": "2020-09-17",
+    "categories": [
+      "statistics",
+      "dataviz"
+    ],
+    "preview": "posts/2020-09-17-confidence-intervals-in-linear-regression/confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-8-1.png",
+    "last_modified": "2020-09-22T13:12:43+02:00",
+    "input_file": {},
+    "preview_width": 4800,
+    "preview_height": 2800
+  },
+  {
     "path": "posts/2020-05-15-r-base-graphics-tutorial/",
     "title": "R Base Graphics Tutorial",
     "description": "This tutorial helps to build R base graphics functions for plotting results of differential expression analysis by DESeq2. \nThe final functions are part of HelpersforDESeq2 package (under development).",
@@ -18,6 +39,7 @@
     ],
     "preview": "posts/2020-05-15-r-base-graphics-tutorial/r-base-graphics-tutorial_files/figure-html5/unnamed-chunk-3-1.png",
     "last_modified": "2020-05-15T13:37:00+02:00",
+    "input_file": {},
     "preview_width": 2800,
     "preview_height": 1500
   },
@@ -39,6 +61,7 @@
     ],
     "preview": "posts/2020-02-13-determining-nfr-width-by-cross-correlation/determining-nfr-width-by-cross-correlation_files/figure-html5/unnamed-chunk-6-1.png",
     "last_modified": "2020-02-13T11:34:06+01:00",
+    "input_file": {},
     "preview_width": 768,
     "preview_height": 1152
   },
@@ -60,6 +83,7 @@
     ],
     "preview": "posts/2020-02-12-generalized-linear-mixed-effect-models/generalized-linear-mixed-effect-models_files/figure-html5/unnamed-chunk-2-1.png",
     "last_modified": "2020-02-12T14:12:13+01:00",
+    "input_file": {},
     "preview_width": 1248,
     "preview_height": 768
   },
@@ -80,6 +104,7 @@
     ],
     "preview": "posts/2019-11-29-data-binning-and-correlation/data-binning-and-correlation_files/figure-html5/unnamed-chunk-4-1.png",
     "last_modified": "2019-11-29T11:03:42+01:00",
+    "input_file": {},
     "preview_width": 1920,
     "preview_height": 1920
   },
@@ -101,6 +126,7 @@
     ],
     "preview": "posts/2019-11-28-k-means-clustering-femalemale-embryos/k-means-clustering-femalemale-embryos_files/figure-html5/unnamed-chunk-8-1.png",
     "last_modified": "2019-11-29T11:07:09+01:00",
+    "input_file": {},
     "preview_width": 1920,
     "preview_height": 1920
   },
@@ -119,6 +145,7 @@
       "welcome"
     ],
     "preview": {},
-    "last_modified": "2019-11-28T17:26:16+01:00"
+    "last_modified": "2019-11-28T17:26:16+01:00",
+    "input_file": {}
   }
 ]

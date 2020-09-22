@@ -1,0 +1,198 @@
+---
+title: "Confidence Intervals in linear regression"
+description: |
+  A short description of the post.
+author:
+  - name: "Tamas Schauer"
+    url: https://github.com/tschauer
+    affiliation: LMU - Biomedical Center
+    affiliation_url: https://www.compbio.bmc.med.uni-muenchen.de/about_us/people/index.html
+date: 2020-09-17
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 3
+base_url: https://tschauer.github.io/blog/
+twitter:
+  site: "@tamas_schauer"
+  card: summary_large_image
+categories:
+  - statistics
+  - dataviz
+repository_url: https://github.com/tschauer/blog/tree/gh-pages
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+```{r global options, include = FALSE}
+knitr::opts_chunk$set(echo=TRUE, include = TRUE, warning=FALSE, message=FALSE)
+```
+
+---
+
+## Setup
+
+```{r}
+set.seed(6)
+
+n1 <- 10
+n2 <- 50
+
+x1 <- rnorm(n1, sd=2)
+y1 <- 5 + 2*x1 + rnorm(n1, sd=1)
+
+x2 <- rnorm(n2, sd=2)
+y2 <- 10 + 1*x2 + rnorm(n2, sd=1)
+
+x <- c(x1,x2)
+y <- c(y1,y2)
+
+df <- data.frame(x = x, 
+                 y = y,
+                 group = factor(c(rep("g1", n1), 
+                                  rep("g2", n2))))
+
+head(df)
+```
+
+## Linear regression
+
+### Fit Summary
+
+```{r}
+fit1 <- lm(y1 ~ x1)
+summary(fit1)
+```
+
+```{r}
+fit2 <- lm(y2 ~ x2)
+summary(fit2)
+```
+
+```{r}
+fit <- lm(y ~ group + x + group:x, data = df)
+summary(fit)
+```
+
+
+
+<!-- ### Diagnostics -->
+
+<!-- ```{r, fig.align='center', fig.height=6, fig.width=6, dpi=200, out.width='75%'} -->
+<!-- par(mfrow=c(2,2)) -->
+<!-- plot(fit1, pch=20) -->
+<!-- ``` -->
+
+<!-- ```{r, fig.align='center', fig.height=6, fig.width=6, dpi=200, out.width='75%'} -->
+<!-- par(mfrow=c(2,2)) -->
+<!-- plot(fit2, pch=20) -->
+<!-- ``` -->
+
+<!-- ```{r, fig.align='center', fig.height=6, fig.width=6, dpi=200, out.width='75%'} -->
+<!-- par(mfrow=c(2,2)) -->
+<!-- plot(fit, pch=20) -->
+<!-- ``` -->
+
+
+
+### Confidence intervals
+
+```{r}
+pred1 <- data.frame(x1 = seq(min(x1),max(x1),0.1))
+pred1 <- cbind(pred1, predict(object = fit1, newdata = pred1, interval = "confidence"))
+
+head(pred1)
+```
+
+```{r}
+pred2 <- data.frame(x2 = seq(min(x2), max(x2),0.1))
+pred2 <- cbind(pred2, predict(object = fit2, newdata = pred2, interval = "confidence"))
+
+head(pred2)
+```
+
+```{r}
+pred <- data.frame(x = rep(seq(min(x),max(x),0.1), each=2), group = c("g1","g2"))
+pred <- cbind(pred, predict(object = fit, newdata = pred, interval = "confidence"))
+
+head(pred)
+```
+
+## Plot
+
+### Base graphics
+
+```{r, fig.align='center', fig.height=7, fig.width=12, dpi=200, out.width='100%'}
+par(mfrow=c(1,2), mar = c(4,4,4,4))
+
+plot(y1 ~ x1, pch = 19, col = 1, 
+     xlab = "x", ylab = "y",
+     xlim = c(-5,6), ylim = c(-5,20))
+
+points(y2 ~ x2, pch = 19, col = 2)
+
+polygon(x = c(pred1$x1, rev(pred1$x1)), y = c(pred1$lwr, rev(pred1$upr)), col = "#DDDDDD88", border = NA)
+polygon(x = c(pred2$x2, rev(pred2$x2)), y = c(pred2$lwr, rev(pred2$upr)), col = "#DDDDDD88", border = NA)
+
+lines(fit ~ x1, data = pred1, col="#666666", lwd=2)
+lines(fit ~ x2, data = pred2, col="#666666", lwd=2)
+
+
+plot(y ~ x, data = df,
+     pch = 19, col = df$group, 
+     xlim = c(-5,6), ylim = c(-5,20))
+
+pred_g1 <- pred[pred$group == "g1",]
+pred_g2 <- pred[pred$group == "g2",]
+
+polygon(x = c(pred_g1$x, rev(pred_g1$x)), y = c(pred_g1$lwr, rev(pred_g1$upr)), col = "#DDDDDD88", border = NA)
+polygon(x = c(pred_g2$x, rev(pred_g2$x)), y = c(pred_g2$lwr, rev(pred_g2$upr)), col = "#DDDDDD88", border = NA)
+
+lines(fit ~ x, data = pred_g1, col="#666666", lwd=2)
+lines(fit ~ x, data = pred_g2, col="#666666", lwd=2)
+```
+* compare left and right: slopes are the same
+* confidence intervals different
+* it is beneficial to fit combined model (assumption should be checked though)
+
+### ggplot
+
+```{r, fig.align='center', fig.height=6, fig.width=12, dpi=200, out.width='100%'}
+library(ggplot2)
+library(ggpubr)
+
+gg1 <- ggplot(df, aes(x=x, y=y, group = group)) + 
+      theme_bw() +
+      theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(),
+            text = element_text(size=18)) +
+      coord_cartesian(xlim = c(-5,6), ylim = c(-5,20)) + 
+      geom_point(aes(colour = group), size = 2) +
+      geom_smooth(method=lm, formula = y ~ x, se = TRUE,  aes(group = group), 
+                  colour='#666666' , fill='#DDDDDD', alpha = 0.5) +
+      scale_color_manual(values=c("black", "red"))
+
+
+gg2 <- ggplot(df, aes(x=x, y=y, fill = group)) + 
+      theme_bw() +
+      theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(),
+            text = element_text(size=18)) +
+      coord_cartesian(xlim = c(-5,6), ylim = c(-5,20)) + 
+      geom_point(aes(colour = group), size = 2) +
+      geom_ribbon(data = pred, aes(x=x, y=fit,ymin = lwr, ymax = upr, group = group), 
+                  fill='#DDDDDD', alpha = 0.5) +
+      geom_line(data = pred, aes(y = fit), size = 1, colour="#666666") +
+      scale_color_manual(values=c("black", "red"))
+
+ggarrange(gg1, gg2,
+          ncol = 2, nrow = 1)
+```
+
+* it looks the same as base graphics
+* ```geom_smooth()``` is not the best choice because it fits 2 independent lines
+* add confidence intervals calculated by ```predict()``` using ```geom_ribbon()```
+

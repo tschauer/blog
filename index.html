@@ -731,6 +731,16 @@
   }
   
   
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+  
+  
   /* Improve display for browsers without grid (IE/Edge <= 15) */
   
   .downlevel {
@@ -1292,10 +1302,10 @@
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="index.xml">
-<i class="fa fa-rss"></i>
+<i class="fa fa-rss" aria-hidden="true"></i>
 </a>
 <a href="https://github.com/tschauer/blog/tree/gh-pages">
-<i class="fab fa-github"></i>
+<i class="fab fa-github" aria-hidden="true"></i>
 </a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
@@ -1624,10 +1634,23 @@ function init_posts_list() {
 <div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
 <div class="posts-list">
 <h1 class="posts-list-caption">CompBioMethods</h1>
+<a href="posts/2020-09-17-confidence-intervals-in-linear-regression/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["statistics","dataviz"]}</script>
+<div class="metadata">
+<div class="publishedDate">Sept. 17, 2020</div>
+</div>
+<div class="thumbnail">
+<img data-src="posts/2020-09-17-confidence-intervals-in-linear-regression/confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-8-1.png"/>
+</div>
+<div class="description">
+<h2>Confidence Intervals in linear regression</h2>
+<p>A short description of the post.</p>
+</div>
+</a>
 <a href="posts/2020-05-15-r-base-graphics-tutorial/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["dataviz","R base graphics","RNAseq","DESeq2"]}</script>
 <div class="metadata">
-<div class="publishedDate">May 14, 2020</div>
+<div class="publishedDate">May 15, 2020</div>
 </div>
 <div class="thumbnail">
 <img data-src="posts/2020-05-15-r-base-graphics-tutorial/r-base-graphics-tutorial_files/figure-html5/unnamed-chunk-3-1.png"/>
@@ -1714,7 +1737,7 @@ The final functions are part of HelpersforDESeq2 package (under development).</p
 </li>
 <li>
 <a href="#dataviz">dataviz</a>
-<span class="category-count">(1)</span>
+<span class="category-count">(2)</span>
 </li>
 <li>
 <a href="#DESeq2">DESeq2</a>
@@ -1758,7 +1781,7 @@ The final functions are part of HelpersforDESeq2 package (under development).</p
 </li>
 <li>
 <a href="#statistics">statistics</a>
-<span class="category-count">(2)</span>
+<span class="category-count">(3)</span>
 </li>
 <li>
 <a href="#welcome">welcome</a>
