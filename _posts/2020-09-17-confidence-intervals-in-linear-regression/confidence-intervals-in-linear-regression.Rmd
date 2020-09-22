@@ -1,7 +1,7 @@
 ---
 title: "Confidence Intervals in linear regression"
 description: |
-  A short description of the post.
+  In this post I compare base graphics and ggplot for drawing confidence intervals in linear regression.
 author:
   - name: "Tamas Schauer"
     url: https://github.com/tschauer
