@@ -12,7 +12,7 @@
       <title>Confidence Intervals in linear regression</title>
       <dc:creator>Tamas Schauer</dc:creator>
       <link>https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression</link>
-      <description>A short description of the post.</description>
+      <description>In this post I compare base graphics and ggplot for drawing confidence intervals in linear regression.</description>
       <category>statistics</category>
       <category>dataviz</category>
       <guid>https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression</guid>
