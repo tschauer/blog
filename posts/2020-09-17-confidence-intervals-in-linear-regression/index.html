@@ -1537,7 +1537,7 @@ head(pred)</code></pre>
 <h3 id="base-graphics">Base graphics</h3>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-par(mfrow=c(1,2), mar = c(4,4,4,4))
+par(mfrow=c(1,2), mar = c(4,4,4,4), cex=1.25)
 
 plot(y1 ~ x1, pch = 19, col = 1, 
      xlab = &quot;x&quot;, ylab = &quot;y&quot;,
@@ -1564,7 +1564,7 @@ polygon(x = c(pred_g2$x, rev(pred_g2$x)), y = c(pred_g2$lwr, rev(pred_g2$upr)), 
 
 lines(fit ~ x, data = pred_g1, col=&quot;#666666&quot;, lwd=2)
 lines(fit ~ x, data = pred_g2, col=&quot;#666666&quot;, lwd=2)</code></pre>
-<p><img src="confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-8-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-8-1.png" width="80%" style="display: block; margin: auto;" /></p>
 </div>
 <ul>
 <li>compare left and right: slopes are the same</li>
@@ -1580,7 +1580,7 @@ library(ggpubr)
 gg1 &lt;- ggplot(df, aes(x=x, y=y, group = group)) + 
       theme_bw() +
       theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(),
-            text = element_text(size=18)) +
+            text = element_text(size=22)) +
       coord_cartesian(xlim = c(-5,6), ylim = c(-5,20)) + 
       geom_point(aes(colour = group), size = 2) +
       geom_smooth(method=lm, formula = y ~ x, se = TRUE,  aes(group = group), 
@@ -1591,7 +1591,7 @@ gg1 &lt;- ggplot(df, aes(x=x, y=y, group = group)) +
 gg2 &lt;- ggplot(df, aes(x=x, y=y, fill = group)) + 
       theme_bw() +
       theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(),
-            text = element_text(size=18)) +
+            text = element_text(size=22)) +
       coord_cartesian(xlim = c(-5,6), ylim = c(-5,20)) + 
       geom_point(aes(colour = group), size = 2) +
       geom_ribbon(data = pred, aes(x=x, y=fit,ymin = lwr, ymax = upr, group = group), 
@@ -1601,7 +1601,7 @@ gg2 &lt;- ggplot(df, aes(x=x, y=y, fill = group)) +
 
 ggarrange(gg1, gg2,
           ncol = 2, nrow = 1)</code></pre>
-<p><img src="confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-9-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-9-1.png" width="80%" style="display: block; margin: auto;" /></p>
 </div>
 <ul>
 <li>it looks the same as base graphics</li>

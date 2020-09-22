@@ -127,8 +127,8 @@ head(pred)
 
 ### Base graphics
 
-```{r, fig.align='center', fig.height=7, fig.width=12, dpi=200, out.width='100%'}
-par(mfrow=c(1,2), mar = c(4,4,4,4))
+```{r, fig.align='center', fig.height=7, fig.width=12, dpi=200, out.width='80%'}
+par(mfrow=c(1,2), mar = c(4,4,4,4), cex=1.25)
 
 plot(y1 ~ x1, pch = 19, col = 1, 
      xlab = "x", ylab = "y",
@@ -162,14 +162,14 @@ lines(fit ~ x, data = pred_g2, col="#666666", lwd=2)
 
 ### ggplot
 
-```{r, fig.align='center', fig.height=6, fig.width=12, dpi=200, out.width='100%'}
+```{r, fig.align='center', fig.height=6, fig.width=12, dpi=200, out.width='80%'}
 library(ggplot2)
 library(ggpubr)
 
 gg1 <- ggplot(df, aes(x=x, y=y, group = group)) + 
       theme_bw() +
       theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(),
-            text = element_text(size=18)) +
+            text = element_text(size=22)) +
       coord_cartesian(xlim = c(-5,6), ylim = c(-5,20)) + 
       geom_point(aes(colour = group), size = 2) +
       geom_smooth(method=lm, formula = y ~ x, se = TRUE,  aes(group = group), 
@@ -180,7 +180,7 @@ gg1 <- ggplot(df, aes(x=x, y=y, group = group)) +
 gg2 <- ggplot(df, aes(x=x, y=y, fill = group)) + 
       theme_bw() +
       theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(),
-            text = element_text(size=18)) +
+            text = element_text(size=22)) +
       coord_cartesian(xlim = c(-5,6), ylim = c(-5,20)) + 
       geom_point(aes(colour = group), size = 2) +
       geom_ribbon(data = pred, aes(x=x, y=fit,ymin = lwr, ymax = upr, group = group), 
