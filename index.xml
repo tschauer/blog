@@ -20,6 +20,20 @@
       <media:content url="https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression/confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-8-1.png" medium="image" type="image/png" width="4800" height="2800"/>
     </item>
     <item>
+      <title>A comparison of statistical methods for analyzing mass spectrometry data</title>
+      <dc:creator>Tamas Schauer</dc:creator>
+      <link>https://tschauer.github.io/blog/posts/2020-09-24-mass-spec-analysis-with-ttest-lm-or-limma</link>
+      <description>Analysis of mass spectrometry data with t.test, lm or limma.</description>
+      <category>statistics</category>
+      <category>linear models</category>
+      <category>limma</category>
+      <category>mass spectrometry</category>
+      <category>dataviz</category>
+      <guid>https://tschauer.github.io/blog/posts/2020-09-24-mass-spec-analysis-with-ttest-lm-or-limma</guid>
+      <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://tschauer.github.io/blog/posts/2020-09-24-mass-spec-analysis-with-ttest-lm-or-limma/mass-spec-analysis-with-ttest-lm-or-limma_files/figure-html5/unnamed-chunk-11-1.png" medium="image" type="image/png" width="4800" height="4800"/>
+    </item>
+    <item>
       <title>R Base Graphics Tutorial</title>
       <dc:creator>Tamas Schauer</dc:creator>
       <link>https://tschauer.github.io/blog/posts/2020-05-15-r-base-graphics-tutorial</link>

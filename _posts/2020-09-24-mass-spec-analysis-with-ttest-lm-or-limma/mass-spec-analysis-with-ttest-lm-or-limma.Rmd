@@ -1,0 +1,281 @@
+---
+title: "A comparison of statistical methods for analyzing mass spectrometry data"
+description: |
+  Analysis of mass spectrometry data with t.test, lm or limma.
+author:
+  - name: "Tamas Schauer"
+    url: https://github.com/tschauer
+    affiliation: LMU - Biomedical Center
+    affiliation_url: https://www.compbio.bmc.med.uni-muenchen.de/about_us/people/index.html
+date: 2020-09-17
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 3
+base_url: https://tschauer.github.io/blog/
+twitter:
+  site: "@tamas_schauer"
+  card: summary_large_image
+categories:
+  - statistics
+  - linear models
+  - limma
+  - mass spectrometry
+  - dataviz
+repository_url: https://github.com/tschauer/blog/tree/gh-pages
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+```{r global options, include = FALSE}
+knitr::opts_chunk$set(echo=TRUE, include = TRUE, warning=FALSE, message=FALSE)
+```
+
+---
+
+## Data Description
+
+* AP-MS data of DomA, DomB and control IP
+* 3 biological with 3 technical replicates each
+* biological replicates are from different clones (c_1, c_2 etc.)
+* label-free quantification (LFQ) and imputation was performed previously
+* technical replicates were averaged
+* data were log-transformed
+* data source: Scacchetti et al. 2020, https://cdn.elifesciences.org/articles/56325/elife-56325-supp1-v1.xlsx
+
+---
+
+## Setup
+
+
+```{r}
+# load data
+ms_data <- read.table("data_massspec/elife-56325-supp1-v1.txt", header = T, row.names = 1, stringsAsFactors = FALSE)
+
+ms_data[1:5,1:4]
+```
+
+```{r}
+library(org.Dm.eg.db)
+# convert protein ids to gene names
+gene_names <- mapIds(x = org.Dm.eg.db, keys = gsub("\\;.*","", rownames(ms_data)), 
+                     keytype = "UNIPROT", column = "SYMBOL", multiVals = "first")
+```
+
+
+```{r}
+# setup conditions
+my_conditions <- factor(gsub("_.*","",colnames(ms_data)))
+my_conditions
+```
+```{r}
+# setup comparisons
+my_comparisons <- list(c(levels(my_conditions)[2], levels(my_conditions)[1]),
+                       c(levels(my_conditions)[3], levels(my_conditions)[1]),
+                       c(levels(my_conditions)[2], levels(my_conditions)[3]))
+my_comparisons
+```
+
+## Students t-test
+
+* fit a t-test for each pair-wise comparison for each protein
+* the model includes only 6 data points in each test
+* 3 tests (comparisons) are performed separately (multiple testing)
+
+```{r}
+for(j in seq_along(my_comparisons)){
+      
+      res_ttest <- data.frame(matrix(NA, nrow = nrow(ms_data), ncol = 2),
+                              row.names = rownames(ms_data))
+      
+      for(i in 1:nrow(ms_data)){
+            
+            fit <-  t.test(x = ms_data[i, my_conditions == my_comparisons[[j]][1]], 
+                           y = ms_data[i, my_conditions == my_comparisons[[j]][2]], 
+                           var.equal = TRUE)
+            
+            res_ttest[i,1] <- fit$estimate[1] - fit$estimate[2]
+            res_ttest[i,2] <- fit$p.value
+            
+            rm(list = "fit")
+      }
+      
+      my_comparison_name <- paste(my_comparisons[[j]], collapse = "vs")
+      
+      colnames(res_ttest) <- c(paste0("coef_",my_comparison_name),
+                               paste0("pval_",my_comparison_name))
+      
+      res_ttest$gene_name <- gene_names
+      
+      assign(paste0("res_ttest_", my_comparison_name), res_ttest)
+      
+      rm(list = "res_ttest")
+}
+```
+
+
+```{r}
+head(res_ttest_DomAvsCTRL)
+```
+
+
+## Linear model with lm
+
+* fit a linear model for each protein
+* the model includes all 9 data points in each model
+* 3 contrasts (comparisons) are performed on the same model
+
+```{r}
+for(j in seq_along(my_comparisons)){
+      
+      res_lm <- data.frame(matrix(NA, nrow = nrow(ms_data), ncol = 2),
+                           row.names = rownames(ms_data))
+      
+      for(i in 1:nrow(ms_data)){
+            
+            y <- as.numeric(ms_data[i,])
+            my_conditions <- relevel(relevel(my_conditions, ref = my_comparisons[[j]][1]), ref = my_comparisons[[j]][2])
+            
+            fit <- lm(y ~ my_conditions)
+            
+            res_lm[i,1] <- coef(summary(fit))[2,1]
+            res_lm[i,2] <- coef(summary(fit))[2,4]
+      }
+      
+      my_comparison_name <- paste(my_comparisons[[j]], collapse = "vs")
+      
+      colnames(res_lm) <- c(paste0("coef_",my_comparison_name),
+                            paste0("pval_",my_comparison_name))
+      
+      res_lm$gene_name <- gene_names
+      
+      assign(paste0("res_lm_", my_comparison_name), res_lm)
+      
+      rm(list = "res_lm")
+}
+```
+
+
+```{r}
+head(res_lm_DomAvsCTRL)
+```
+
+
+## Linear model with limma
+
+* fit a linear model including all data points
+* information is "borrowed" across proteins
+* 3 contrasts (comparisons) are performed on the same model
+
+```{r}
+library(limma)
+
+for(j in seq_along(my_comparisons)){
+      
+      res_limma <- data.frame(matrix(NA, nrow = nrow(ms_data), ncol = 2),
+                              row.names = rownames(ms_data))
+      
+      design <- model.matrix( ~ 0 + my_conditions) 
+      colnames(design) <- levels(my_conditions)
+      
+      my_comparison <- paste(my_comparisons[[j]], collapse = "-")
+      my_contrast <- makeContrasts(my_comparison, levels = design)
+      
+      ###
+      
+      fit <- eBayes(contrasts.fit(lmFit(ms_data, design), my_contrast))
+      
+      res_limma[,1] <- as.numeric(fit$coefficients)
+      res_limma[,2] <- as.numeric(fit$p.value)
+      
+      rm(list = "fit")
+      
+      ###
+      
+      my_comparison_name <- paste(my_comparisons[[j]], collapse = "vs")
+      
+      colnames(res_limma) <- c(paste0("coef_",my_comparison_name),
+                               paste0("pval_",my_comparison_name))
+      
+      res_limma$gene_name <- gene_names
+      
+      assign(paste0("res_limma_", my_comparison_name), res_limma)
+      
+      rm(list = "res_limma")
+}
+```
+
+
+```{r}
+head(res_limma_DomAvsCTRL)
+```
+
+## Volcano Plots
+
+* loop through methods and comparisons
+* plot difference against -log10 p-value 
+* color proteins with fdr < 0.05
+* label some interesting proteins
+
+```{r, fig.align='center', fig.height=12, fig.width=12, dpi=200, out.width='100%'}
+par(mfrow=c(3,3), mar = c(4,4,0,0), oma = c(1,3,1,1), mgp = c(2,1,0) ,cex=1.25)
+
+fav_genes <- c("dom", "Tip60", "Arp6", "ocm")
+my_methods <- c("ttest","lm","limma")
+
+for(i in seq_along(my_methods)){
+      
+      my_method <- my_methods[i]
+      
+      for(j in seq_along(my_comparisons)){
+            
+            my_comparison_name <- paste(my_comparisons[[j]], collapse = "vs")
+            
+            res_plot <- get(paste0("res_",my_method,"_", my_comparison_name))
+            
+            plot(res_plot[,1], -log10(res_plot[,2]),
+                 xlim = c(-10,10), ylim = c(0,12),
+                 ylab = "-log10 p-value",
+                 xlab = gsub("vs", " vs ", my_comparison_name), 
+                 pch = 19, col = "grey", cex = 0.25)
+            
+            my_sign <- p.adjust(res_plot[,2], method = "BH") < 0.05
+            
+            points(res_plot[,1][my_sign], 
+                   -log10(res_plot[,2][my_sign]),
+                   pch = 19, col = "darkred", cex = 0.75)
+            
+            my_labeled <- res_plot$gene_name %in% fav_genes
+            
+            points(res_plot[,1][my_labeled], 
+                   -log10(res_plot[,2][my_labeled]),
+                   pch = 19, col = "black", cex = 0.25)
+            
+            text(res_plot[,1][my_labeled], 
+                 -log10(res_plot[,2][my_labeled]),
+                 res_plot$gene_name[my_labeled],
+                 col = "black", adj = c(0.5,-0.25), cex = 0.8)
+            
+            legend("topleft", legend = c("all","fdr < 0.05", "labeled"),
+                   pch = 19, col = c("grey", "darkred", "black"), pt.cex = c(0.5,1,0.5))
+            
+            if(j == 1){
+                  mtext(my_method, side = 2, line = 3.5, cex =1.5, font = 2)
+            }
+      }
+}
+```
+
+## Conclusions
+
+* p-values are less significant using ```t.test``` compared to ```lm``` or ```limma```
+* it gives more power to fit a model with all data points (e.g. Tip60 in DomA vs DomB)
+* some proteins with a small difference are significant using ```t.test``` or ```lm``` 
+(e.g. ocm, false positive?)
+* ```limma``` gives a "better separated" volcano plot.
+
