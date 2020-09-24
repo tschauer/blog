@@ -7,18 +7,7 @@
     <description>CompBioMethods
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 17 Sep 2020 00:00:00 +0000</lastBuildDate>
-    <item>
-      <title>Confidence Intervals in linear regression</title>
-      <dc:creator>Tamas Schauer</dc:creator>
-      <link>https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression</link>
-      <description>In this post I compare base graphics and ggplot for drawing confidence intervals in linear regression.</description>
-      <category>statistics</category>
-      <category>dataviz</category>
-      <guid>https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression</guid>
-      <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
-      <media:content url="https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression/confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-8-1.png" medium="image" type="image/png" width="4800" height="2800"/>
-    </item>
+    <lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0000</lastBuildDate>
     <item>
       <title>A comparison of statistical methods for analyzing mass spectrometry data</title>
       <dc:creator>Tamas Schauer</dc:creator>
@@ -30,8 +19,19 @@
       <category>mass spectrometry</category>
       <category>dataviz</category>
       <guid>https://tschauer.github.io/blog/posts/2020-09-24-mass-spec-analysis-with-ttest-lm-or-limma</guid>
-      <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
       <media:content url="https://tschauer.github.io/blog/posts/2020-09-24-mass-spec-analysis-with-ttest-lm-or-limma/mass-spec-analysis-with-ttest-lm-or-limma_files/figure-html5/unnamed-chunk-11-1.png" medium="image" type="image/png" width="4800" height="4800"/>
+    </item>
+    <item>
+      <title>Confidence Intervals in linear regression</title>
+      <dc:creator>Tamas Schauer</dc:creator>
+      <link>https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression</link>
+      <description>In this post I compare base graphics and ggplot for drawing confidence intervals in linear regression.</description>
+      <category>statistics</category>
+      <category>dataviz</category>
+      <guid>https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression</guid>
+      <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://tschauer.github.io/blog/posts/2020-09-17-confidence-intervals-in-linear-regression/confidence-intervals-in-linear-regression_files/figure-html5/unnamed-chunk-8-1.png" medium="image" type="image/png" width="4800" height="2800"/>
     </item>
     <item>
       <title>R Base Graphics Tutorial</title>

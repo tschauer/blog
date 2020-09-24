@@ -7,7 +7,7 @@ author:
     url: https://github.com/tschauer
     affiliation: LMU - Biomedical Center
     affiliation_url: https://www.compbio.bmc.med.uni-muenchen.de/about_us/people/index.html
-date: 2020-09-17
+date: 2020-09-24
 output:
   distill::distill_article:
     self_contained: false

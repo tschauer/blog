@@ -26,8 +26,8 @@
 <link rel="canonical" href="https://tschauer.github.io/blog/posts/2020-09-24-mass-spec-analysis-with-ttest-lm-or-limma/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2020-09-17"/>
-<meta property="article:created" itemprop="dateCreated" content="2020-09-17"/>
+<meta property="article:published" itemprop="datePublished" content="2020-09-24"/>
+<meta property="article:created" itemprop="dateCreated" content="2020-09-24"/>
 <meta name="article:author" content="Tamas Schauer"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -54,15 +54,15 @@
 <!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
 <meta name="citation_title" content="CompBioMethods: A comparison of statistical methods for analyzing mass spectrometry data"/>
 <meta name="citation_fulltext_html_url" content="https://tschauer.github.io/blog/posts/2020-09-24-mass-spec-analysis-with-ttest-lm-or-limma/"/>
-<meta name="citation_online_date" content="2020/09/17"/>
-<meta name="citation_publication_date" content="2020/09/17"/>
+<meta name="citation_online_date" content="2020/09/24"/>
+<meta name="citation_publication_date" content="2020/09/24"/>
 <meta name="citation_author" content="Tamas Schauer"/>
 <meta name="citation_author_institution" content="LMU - Biomedical Center"/>
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","base_url","twitter","categories","repository_url","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["A comparison of statistical methods for analyzing mass spectrometry data"]},{"type":"character","attributes":{},"value":["Analysis of mass spectrometry data with t.test, lm or limma."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Tamas Schauer"]},{"type":"character","attributes":{},"value":["https://github.com/tschauer"]},{"type":"character","attributes":{},"value":["LMU - Biomedical Center"]},{"type":"character","attributes":{},"value":["https://www.compbio.bmc.med.uni-muenchen.de/about_us/people/index.html"]}]}]},{"type":"character","attributes":{},"value":["2020-09-17"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]},{"type":"character","attributes":{},"value":["https://tschauer.github.io/blog/"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["site","card"]}},"value":[{"type":"character","attributes":{},"value":["@tamas_schauer"]},{"type":"character","attributes":{},"value":["summary_large_image"]}]},{"type":"character","attributes":{},"value":["statistics","linear models","limma","mass spectrometry","dataviz"]},{"type":"character","attributes":{},"value":["https://github.com/tschauer/blog/tree/gh-pages"]},{"type":"character","attributes":{},"value":["https://tschauer.github.io/blog/posts/2020-09-24-mass-spec-analysis-with-ttest-lm-or-limma/"]},{"type":"character","attributes":{},"value":["https://tschauer.github.io/blog/posts/2020-09-24-mass-spec-analysis-with-ttest-lm-or-limma/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","base_url","twitter","categories","repository_url","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["A comparison of statistical methods for analyzing mass spectrometry data"]},{"type":"character","attributes":{},"value":["Analysis of mass spectrometry data with t.test, lm or limma."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Tamas Schauer"]},{"type":"character","attributes":{},"value":["https://github.com/tschauer"]},{"type":"character","attributes":{},"value":["LMU - Biomedical Center"]},{"type":"character","attributes":{},"value":["https://www.compbio.bmc.med.uni-muenchen.de/about_us/people/index.html"]}]}]},{"type":"character","attributes":{},"value":["2020-09-24"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]},{"type":"character","attributes":{},"value":["https://tschauer.github.io/blog/"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["site","card"]}},"value":[{"type":"character","attributes":{},"value":["@tamas_schauer"]},{"type":"character","attributes":{},"value":["summary_large_image"]}]},{"type":"character","attributes":{},"value":["statistics","linear models","limma","mass spectrometry","dataviz"]},{"type":"character","attributes":{},"value":["https://github.com/tschauer/blog/tree/gh-pages"]},{"type":"character","attributes":{},"value":["https://tschauer.github.io/blog/posts/2020-09-24-mass-spec-analysis-with-ttest-lm-or-limma/"]},{"type":"character","attributes":{},"value":["https://tschauer.github.io/blog/posts/2020-09-24-mass-spec-analysis-with-ttest-lm-or-limma/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1314,7 +1314,7 @@ gtag('config', 'UA-158382933-1');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"A comparison of statistical methods for analyzing mass spectrometry data","description":"Analysis of mass spectrometry data with t.test, lm or limma.","authors":[{"author":"Tamas Schauer","authorURL":"https://github.com/tschauer","affiliation":"LMU - Biomedical Center","affiliationURL":"https://www.compbio.bmc.med.uni-muenchen.de/about_us/people/index.html"}],"publishedDate":"2020-09-17T00:00:00.000+02:00","citationText":"Schauer, 2020"}
+{"title":"A comparison of statistical methods for analyzing mass spectrometry data","description":"Analysis of mass spectrometry data with t.test, lm or limma.","authors":[{"author":"Tamas Schauer","authorURL":"https://github.com/tschauer","affiliation":"LMU - Biomedical Center","affiliationURL":"https://www.compbio.bmc.med.uni-muenchen.de/about_us/people/index.html"}],"publishedDate":"2020-09-24T00:00:00.000+02:00","citationText":"Schauer, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1349,7 +1349,7 @@ gtag('config', 'UA-158382933-1');
 <div class="d-byline">
   Tamas Schauer <a href="https://github.com/tschauer" class="uri">https://github.com/tschauer</a> (LMU - Biomedical Center)<a href="https://www.compbio.bmc.med.uni-muenchen.de/about_us/people/index.html" class="uri">https://www.compbio.bmc.med.uni-muenchen.de/about_us/people/index.html</a>
   
-<br/>2020-09-17
+<br/>2020-09-24
 </div>
 
 <div class="d-article">
@@ -1659,7 +1659,7 @@ for(i in seq_along(my_methods)){
   <p>If you see mistakes or want to suggest changes, please <a href="https://github.com/tschauer/blog/tree/gh-pages/issues/new">create an issue</a> on the source repository.</p>
   <h3 id="citation">Citation</h3>
   <p>For attribution, please cite this work as</p>
-  <pre class="citation-appendix short">Schauer (2020, Sept. 17). CompBioMethods: A comparison of statistical methods for analyzing mass spectrometry data. Retrieved from https://tschauer.github.io/blog/posts/2020-09-24-mass-spec-analysis-with-ttest-lm-or-limma/</pre>
+  <pre class="citation-appendix short">Schauer (2020, Sept. 24). CompBioMethods: A comparison of statistical methods for analyzing mass spectrometry data. Retrieved from https://tschauer.github.io/blog/posts/2020-09-24-mass-spec-analysis-with-ttest-lm-or-limma/</pre>
   <p>BibTeX citation</p>
   <pre class="citation-appendix long">@misc{schauer2020a,
   author = {Schauer, Tamas},

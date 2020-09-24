@@ -1,5 +1,29 @@
 [
   {
+    "path": "posts/2020-09-24-mass-spec-analysis-with-ttest-lm-or-limma/",
+    "title": "A comparison of statistical methods for analyzing mass spectrometry data",
+    "description": "Analysis of mass spectrometry data with t.test, lm or limma.",
+    "author": [
+      {
+        "name": "Tamas Schauer",
+        "url": "https://github.com/tschauer"
+      }
+    ],
+    "date": "2020-09-24",
+    "categories": [
+      "statistics",
+      "linear models",
+      "limma",
+      "mass spectrometry",
+      "dataviz"
+    ],
+    "preview": "posts/2020-09-24-mass-spec-analysis-with-ttest-lm-or-limma/mass-spec-analysis-with-ttest-lm-or-limma_files/figure-html5/unnamed-chunk-11-1.png",
+    "last_modified": "2020-09-24T16:35:09+02:00",
+    "input_file": {},
+    "preview_width": 4800,
+    "preview_height": 4800
+  },
+  {
     "path": "posts/2020-09-17-confidence-intervals-in-linear-regression/",
     "title": "Confidence Intervals in linear regression",
     "description": "In this post I compare base graphics and ggplot for drawing confidence intervals in linear regression.",
@@ -19,30 +43,6 @@
     "input_file": {},
     "preview_width": 4800,
     "preview_height": 2800
-  },
-  {
-    "path": "posts/2020-09-24-mass-spec-analysis-with-ttest-lm-or-limma/",
-    "title": "A comparison of statistical methods for analyzing mass spectrometry data",
-    "description": "Analysis of mass spectrometry data with t.test, lm or limma.",
-    "author": [
-      {
-        "name": "Tamas Schauer",
-        "url": "https://github.com/tschauer"
-      }
-    ],
-    "date": "2020-09-17",
-    "categories": [
-      "statistics",
-      "linear models",
-      "limma",
-      "mass spectrometry",
-      "dataviz"
-    ],
-    "preview": "posts/2020-09-24-mass-spec-analysis-with-ttest-lm-or-limma/mass-spec-analysis-with-ttest-lm-or-limma_files/figure-html5/unnamed-chunk-11-1.png",
-    "last_modified": "2020-09-24T16:30:58+02:00",
-    "input_file": {},
-    "preview_width": 4800,
-    "preview_height": 4800
   },
   {
     "path": "posts/2020-05-15-r-base-graphics-tutorial/",
